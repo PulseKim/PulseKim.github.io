@@ -1,0 +1,4 @@
+baseURL = 'https://PulseKim.github.io/'
+languageCode = 'en-us'
+title = "Sunwoo's new house"
+theme = 'ananke'
