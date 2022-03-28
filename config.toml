@@ -1,4 +1,41 @@
 baseURL = 'https://PulseKim.github.io/'
 languageCode = 'en-us'
-title = "Sunwoo's new house"
-theme = 'ananke'
+title = "Sunwoo Kim"
+theme = 'hugo-casper3'
+paginate = 3
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+
+
+[params]
+  github = "https://github.com/PulseKim"
+  description = ""
+  mainSections = ["posts"]
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+  	identifier = "publication"
+  	name = "Publications"
+  	url = "/posts/Hucoq/"
+  	weight = 11
+  [[menu.main]]
+    identifier = "github"
+    name = "Github"
+    url = "https://github.com/PulseKim/"
+    weight = 30
+  [[menu.main]]
+    identifier = "CV"
+    name = "CV"
+    url = "https://drive.google.com/file/d/1BDrJNFg7tUjDlFzrLvj45jErYlW6BRZ7/view?usp=sharing"
+    weight = 40
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
