@@ -9,7 +9,7 @@ tags = [
 ]
 feature_image = "/images/KingsMan.png"
 +++
-This project develops improved color palette extraction from images.
+This project develops improved color palette extraction from images, 2017.
 <!--more-->
 
 ### About

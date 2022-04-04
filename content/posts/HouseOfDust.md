@@ -9,7 +9,7 @@ tags = [
 ]
 feature_image = "/images/houseofdust.png"
 +++
-We aim to design a building that can be adaptable for the Mars environment
+We aim to design a building that can be adaptable for the Mars environment, 2018
 <!--more-->
 
 ### About

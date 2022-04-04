@@ -9,7 +9,7 @@ tags = [
 ]
 feature_image = "/images/ATV.gif"
 +++
-The artistic style transferred video using "Starry Starry Night" by Van Gogh 
+The artistic style transferred video using "Starry Starry Night" by Van Gogh, 2016.
 <!--more-->
 
 ### About
