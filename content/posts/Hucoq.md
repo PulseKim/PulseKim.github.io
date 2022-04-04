@@ -9,10 +9,11 @@ tags = [
 ]
 feature_image = "/images/PushTasks.gif"
 +++
-(On review)
+(Paper under review)
 <!--more-->
 
 ### Project Site
+There are heavy gif files: Please wait until gif files are fully loaded.
 https://sites.google.com/view/hucoq
 
 ### Abstract

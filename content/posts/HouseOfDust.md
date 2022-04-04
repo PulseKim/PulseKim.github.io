@@ -9,14 +9,11 @@ tags = [
 ]
 feature_image = "/images/houseofdust.png"
 +++
-This project
+We aim to design a building that can be adaptable for the Mars environment
 <!--more-->
 
 ### About
-This project is
-
-### Awarded
-Grand prize - Pohang University of Science and Technology(2016)
+We design the habitat for NASA Centennial Challenge 2018 3D Printed Habitat Challenge. The key idea is to analyze the dusty environment of Mars and designing the habitat for adaptation. We used Autodesk 3ds Max for designing and 3D printer for a prototyping.
 
 ### Video
 
