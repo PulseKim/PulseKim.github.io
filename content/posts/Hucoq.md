@@ -9,7 +9,7 @@ tags = [
 ]
 feature_image = "/images/PushTasks.gif"
 +++
-(Paper under review)
+(Accepted: Robotics Science and Systems, 2022)
 <!--more-->
 
 ### Project Site
