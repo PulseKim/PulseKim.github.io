@@ -9,7 +9,7 @@ tags = [
 ]
 feature_image = "/images/PushTasks.gif"
 +++
-(Accepted: Robotics Science and Systems, 2022)
+Paper Accepted: Robotics Science and Systems, 2022
 <!--more-->
 
 ### Project Site
@@ -21,4 +21,4 @@ A motion-based control interface promises flexible robot operations in dangerous
 
 ### Supplementary Video
 
-{{< youtube zGpqxIFmo-A>}}
+{{< youtube kz8hBG1CKMY>}}
