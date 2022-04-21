@@ -3,7 +3,7 @@ weight = 1
 author = "Sunwoo Kim"
 title = "Human Motion Control of Quadrupedal Robots using Deep Reinforcement Learning"
 date = "2022-03-28"
-description = "HuMoQuad"
+description = "HumanConquad"
 tags = [
     "Publications","Robotics", "Reinforcement Learning", "Human robot interaction"
 ]
