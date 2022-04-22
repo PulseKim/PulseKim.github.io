@@ -1,6 +1,6 @@
 +++
 title = "About"
-description = "Sunwoo Kim"
+description = "Sunwoo Kim (Pulse Kim)"
 date = "2022-03-28"
 aliases = ["about","contact"]
 author = "Sunwoo Kim"
