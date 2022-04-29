@@ -32,7 +32,7 @@ footnoteReturnLinkContents = "^"
   [[menu.main]]
     identifier = "CV"
     name = "CV"
-    url = "https://drive.google.com/file/d/1BDrJNFg7tUjDlFzrLvj45jErYlW6BRZ7/view?usp=sharing"
+    url = "/files/SunwooKimCV.pdf"
     weight = 40
 
 [taxonomies]
