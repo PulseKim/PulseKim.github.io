@@ -5,7 +5,7 @@ title = "The House of Dust"
 date = "2022-03-28"
 description = "The house of dust"
 tags = [
-    "Project","Animation", "ComputerGraphics"
+    "Project","Architecture"
 ]
 feature_image = "/images/houseofdust.png"
 +++
