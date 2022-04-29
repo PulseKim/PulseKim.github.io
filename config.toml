@@ -22,7 +22,7 @@ footnoteReturnLinkContents = "^"
   [[menu.main]]
   	identifier = "publication"
   	name = "Publications"
-  	url = "/posts/Hucoq/"
+  	url = "/posts/HumanConQuad/"
   	weight = 11
   [[menu.main]]
     identifier = "github"
