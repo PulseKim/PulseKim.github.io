@@ -17,7 +17,8 @@ Sunwoo Kim, Maks Sorokin, Jehee Lee, Sehoon Ha
 ### Project Site
 There are heavy gif files: Please wait until gif files are fully loaded. \
 [Project Site](https://sites.google.com/view/humanconquad)  
-[arXiv](https://arxiv.org/abs/2204.13336)
+[ArXiv](https://arxiv.org/abs/2204.13336)
+[Paper](/files/HumanConQuad.pdf)
 
 
 ### Abstract
