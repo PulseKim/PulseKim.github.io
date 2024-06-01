@@ -7,7 +7,7 @@ description = "HumanConquad"
 tags = [
     "Publications","Robotics", "Reinforcement Learning", "Human robot interaction"
 ]
-feature_image = "/images/PushTasks.gif"
+feature_image = "/images/a15.gif"
 +++
 Robotics: Science and Systems, 2022
 <!--more-->
