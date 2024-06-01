@@ -1,8 +1,8 @@
 +++
-weight = 20
+weight = 10
 author = "Sunwoo Kim"
 title = "Towards Natural Prosthetic Hand Gestures: A Common-Rig and Diffusion Inpainting Pipeline"
-date = "2024-06-02"
+date = "2024-06-01"
 description = "Towards Natural Prosthetic Hand Gestures"
 tags = [
     "Publications","Animation", "ComputerGraphics", "Robotics", "Biomedical"
