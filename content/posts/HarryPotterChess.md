@@ -1,5 +1,5 @@
 +++
-weight = 5
+weight = 40
 author = "Sunwoo Kim"
 title = "HarryPotterChess"
 date = "2022-03-28"
