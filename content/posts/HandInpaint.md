@@ -5,9 +5,9 @@ title = "Towards Natural Prosthetic Hand Gestures: A Common-Rig and Diffusion In
 date = "2024-06-02"
 description = "Towards Natural Prosthetic Hand Gestures"
 tags = [
-    "Publications","Animation", "ComputerGraphics", "Robotics", "Bio-medical"
+    "Publications","Animation", "ComputerGraphics", "Robotics", "Biomedical"
 ]
-feature_image = "/images/15a.gif"
+feature_image = "/images/a15.gif"
 +++
 IEEE Engineering in Medicine and Biology Society (EMBC) 2024
 <!--more-->
