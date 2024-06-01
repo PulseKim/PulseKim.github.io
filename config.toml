@@ -32,7 +32,7 @@ footnoteReturnLinkContents = "^"
   [[menu.main]]
     identifier = "CV"
     name = "CV"
-    url = "/files/SunwooCV.pdf"
+    url = "/files/sunwoocv.pdf"
     weight = 40
 
 [taxonomies]

@@ -5,7 +5,7 @@ title = "Towards Natural Prosthetic Hand Gestures: A Common-Rig and Diffusion In
 date = "2024-06-02"
 description = "Towards Natural Prosthetic Hand Gestures"
 tags = [
-    "Project","Animation", "ComputerGraphics", "Robotics", "Bio-medical"
+    "Publications","Animation", "ComputerGraphics", "Robotics", "Bio-medical"
 ]
 feature_image = "/images/15a.gif"
 +++
