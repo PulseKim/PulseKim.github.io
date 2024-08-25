@@ -1,5 +1,5 @@
 +++
-weight = 60
+weight = 20
 author = "Sunwoo Kim"
 title = "Improved Color Palette Extraction from Pictures"
 date = "2022-03-28"

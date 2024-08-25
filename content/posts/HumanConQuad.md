@@ -1,5 +1,5 @@
 +++
-weight = 1
+weight = 2
 author = "Sunwoo Kim"
 title = "Human Motion Control of Quadrupedal Robots using Deep Reinforcement Learning"
 date = "2022-03-28"

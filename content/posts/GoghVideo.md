@@ -1,5 +1,5 @@
 +++
-weight = 50
+weight = 25
 author = "Sunwoo Kim"
 title = "Improved Artistic Style Transferred(AST) video by Panorama and Layer Separation"
 date = "2022-03-28"
