@@ -1,5 +1,5 @@
 +++
-weight = 15
+weight = 3
 author = "Sunwoo Kim"
 title = "Hand Control Project"
 date = "2022-03-28"
