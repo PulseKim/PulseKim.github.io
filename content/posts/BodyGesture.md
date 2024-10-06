@@ -1,7 +1,7 @@
 +++
 weight = 1
 author = "Sunwoo Kim"
-title = "Body Gesture Generation for Multimodal Conversational Agents[BodyGesture.md](BodyGesture.md)"
+title = "Body Gesture Generation for Multimodal Conversational Agents"
 date = "2024-10-01"
 description = "BodyGesture"
 tags = [
