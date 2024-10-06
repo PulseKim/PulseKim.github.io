@@ -1,5 +1,5 @@
 +++
-weight = 10
+weight = 1
 author = "Sunwoo Kim"
 title = "Towards Natural Prosthetic Hand Gestures: A Common-Rig and Diffusion Inpainting Pipeline"
 date = "2024-06-01"
