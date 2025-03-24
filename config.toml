@@ -1,6 +1,6 @@
 baseURL = 'https://PulseKim.github.io/'
 languageCode = 'en-us'
-title = "Sunwoo Kim"
+title = "Sunwoo Pulse Kim"
 theme = 'hugo-casper3'
 [pagination]
   pagerSize = 3
@@ -35,6 +35,11 @@ footnoteReturnLinkContents = "^"
     name = "CV"
     url = "/files/sunwoocv_241006.pdf"
     weight = 40
+  [[menu.main]]
+    identifier = "drawing"
+    name = "Drawing"
+    url = "/pages/"
+    weight = 50
 
 [taxonomies]
 category = "categories"
