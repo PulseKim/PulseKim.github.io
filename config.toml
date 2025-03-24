@@ -2,7 +2,8 @@ baseURL = 'https://PulseKim.github.io/'
 languageCode = 'en-us'
 title = "Sunwoo Kim"
 theme = 'hugo-casper3'
-paginate = 3
+[pagination]
+  pagerSize = 3
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
