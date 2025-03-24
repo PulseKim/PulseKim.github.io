@@ -36,9 +36,9 @@ footnoteReturnLinkContents = "^"
     url = "/files/sunwoocv_241006.pdf"
     weight = 40
   [[menu.main]]
-    identifier = "drawing"
-    name = "Drawing"
-    url = "/pages/"
+    identifier = "drawings"
+    name = "Drawings"
+    url = "/Drawings/"
     weight = 50
 
 [taxonomies]
