@@ -16,7 +16,7 @@ footer_text: >
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 keywords: 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: /asset/img/PlagueDoc.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: PlagueDoc.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://<github-username>.github.io
 baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -130,17 +130,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 # Optional: Set default categories and tags for posts from each source.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-    categories: [external-posts]
-    tags: [medium]
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
-    categories: [external-posts]
-    tags: [google]
+
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -156,16 +146,13 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
-  books:
-    output: true
   news:
     defaults:
       layout: post
     output: true
   projects:
     output: true
-  teachings:
-    output: true
+
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -382,6 +369,7 @@ imagemagick:
     - ".png"
     - ".tiff"
     - ".gif"
+    - ".webp"
   output_formats:
     webp: "-auto-orient -quality 85"
 
