@@ -18,7 +18,7 @@ keywords:
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: PlagueDoc.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://<github-username>.github.io
+url: https://pulsekim.github.io
 baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -150,8 +150,6 @@ collections:
     defaults:
       layout: post
     output: true
-  projects:
-    output: true
 
 
 # -----------------------------------------------------------------------------
@@ -176,23 +174,17 @@ include: ["_pages", "_scripts"]
 exclude:
   - bin/
   - CONTRIBUTING.md
-  - CUSTOMIZE.md
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
-  - FAQ.md
   - Gemfile
-  - Gemfile.lock
   - INSTALL.md
   - LICENSE
   - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
-  - readme_preview/
-  - vendor
 keep_files:
   - CNAME
   - .nojekyll
@@ -354,7 +346,7 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: false # disables responsive images to avoid CI conversion errors
   widths:
     - 480
     - 800
