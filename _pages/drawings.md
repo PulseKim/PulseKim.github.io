@@ -4,6 +4,8 @@ permalink: /drawings/
 title: drawings
 nav: true
 nav_order: 5
+page_title: My drawings
+page_description: My way of drawing
 pagination:
   enabled: true
   collection: drawings
@@ -18,14 +20,14 @@ pagination:
 
 <div class="post">
 
-{% assign blog_name_size = site.drawings_name | size %}
-{% assign blog_description_size = site.drawings_description | size %}
+{% assign blog_name_size = page.page_title | size %}
+{% assign blog_description_size = page.page_description | size %}
 
 {% if blog_name_size > 0 or blog_description_size > 0 %}
 
   <div class="header-bar">
-    <h1>{{ site.drawings_name }}</h1>
-    <h2>{{ site.drawings_description }}</h2>
+    <h1>{{ page.page_title }}</h1>
+    <h2>{{ page.page_description }}</h2>
   </div>
   {% endif %}
 
