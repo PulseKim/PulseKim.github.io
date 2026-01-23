@@ -8,8 +8,6 @@ on:
 
 jobs:
   deploy:
-    permissions:
-      contents: write
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -26,11 +24,13 @@ jobs:
       - name: Build site with Jekyll
         run: bundle exec jekyll build
 
+      - name: Debug blog_kr header
+        run: |
+          sed -n '1,80p' _site/blog_kr/index.html
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/master'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          publish_branch: gh-pages
-          force_orphan: true
