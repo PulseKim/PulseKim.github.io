@@ -32,6 +32,10 @@ jobs:
         run: |
           sed -n '1,80p' _site/blog_kr/index.html
 
+      - name: Debug blog_kr header-bar
+        run: |
+          rg -n "header-bar|page_title|page_description" _site/blog_kr/index.html || true
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/master'
