@@ -93,18 +93,18 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 blog_en_name: Sunwoo Kim's blog # blog_name will be displayed in your blog page
 blog_en_description: Hi there
-permalink: /blog_en/:year/:title/
-lsi: false # produce an index for related posts
+blog_en_permalink: /blog_en/:year/:title/
+blog_en_lsi: false # produce an index for related posts
 
 blog_kr_name: Sunwoo Kim's blog # blog_name will be displayed in your blog page
 blog_kr_description: 김선우의 블로그입니다.
-permalink: /blog_kr/:year/:title/
-lsi: false # produce an index for related post
+blog_kr_permalink: /blog_kr/:year/:title/
+blog_kr_lsi: false # produce an index for related post
 
 drawings_name: My drawings # blog_name will be displayed in your blog page
 drawings_description: My way of drawing
-permalink: /drawings/:year/:title/
-lsi: false # produce an index for related post
+drawings_permalink: /drawings/:year/:title/
+drawings_lsi: false # produce an index for related post
 
 # Pagination
 pagination:
