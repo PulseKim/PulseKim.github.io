@@ -98,12 +98,12 @@ lsi: false # produce an index for related posts
 
 blog_kr_name: Sunwoo Kim's blog # blog_name will be displayed in your blog page
 blog_kr_description: 김선우의 블로그입니다.
-permalink: /blog_en/:year/:title/
+permalink: /blog_kr/:year/:title/
 lsi: false # produce an index for related post
 
 drawings_name: My drawings # blog_name will be displayed in your blog page
 drawings_description: My way of drawing
-permalink: /blog_en/:year/:title/
+permalink: /drawings/:year/:title/
 lsi: false # produce an index for related post
 
 # Pagination
