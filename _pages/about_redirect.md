@@ -1,4 +1,4 @@
 ---
 permalink: /about/
-redirect: true
+redirect_to: /
 ---
