@@ -34,7 +34,7 @@ jobs:
 
       - name: Debug blog_kr header-bar
         run: |
-          rg -n "header-bar|page_title|page_description" _site/blog_kr/index.html || true
+          grep -n "header-bar\\|page_title\\|page_description" _site/blog_kr/index.html || true
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
