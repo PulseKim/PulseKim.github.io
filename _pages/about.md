@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://xbpeng.github.io/team/'>Our Team</a>. Contact: ska503@sfu.ca
+subtitle: "<a href='https://xbpeng.github.io/team/'>Our Team</a>. Contact: ska503@sfu.ca"
 profile:
   align: right
   image: Profile.jpg
