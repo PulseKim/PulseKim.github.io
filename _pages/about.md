@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: "Pronounced like ‘Sun’ (as in the sky) and ‘Woo’ (similar to ‘wood’).”
+subtitle: "Pronounced like 'Sun' (as in the sky) and 'Woo' (similar to 'wood')."
 profile:
   align: right
   image: Profile.jpg
