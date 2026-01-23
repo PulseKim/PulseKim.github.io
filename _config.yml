@@ -91,12 +91,12 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_en_name: Sunwoo Kim's blog # blog_name will be displayed in your blog page
+blog_en_name: Sun Woo Kim's blog # blog_name will be displayed in your blog page
 blog_en_description: Hi there
 blog_en_permalink: /blog_en/:year/:title/
 blog_en_lsi: false # produce an index for related posts
 
-blog_kr_name: Sunwoo Kim's blog # blog_name will be displayed in your blog page
+blog_kr_name: 김선우의 블로그 # blog_name will be displayed in your blog page
 blog_kr_description: 김선우의 블로그입니다.
 blog_kr_permalink: /blog_kr/:year/:title/
 blog_kr_lsi: false # produce an index for related post
