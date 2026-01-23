@@ -15,21 +15,21 @@
       institution: Simon Fraser University
       year: 2025 - Present
       description:
-        - Major: Computing Science 
-        - Supervisor: Xue Bin (Jason) Peng
+        - Computing Science 
+        - Supervisor - Xue Bin (Jason) Peng
     - title: Master’s degree
       institution: Seoul National University
       year: 2019-2022
       description:
-        - Major: Computer Science
-        - Supervisor: Jehee Lee
-        - Co-work: Sehoon Ha (Georgia Institute of Technology)
-        - Thesis: Developing Motion Control of Different Morphology using Deep Reinforcement Learning
+        - Computer Science
+        - Supervisor - Jehee Lee
+        - Co-work - Sehoon Ha (Georgia Institute of Technology)
+        - Thesis - Developing Motion Control of Different Morphology using Deep Reinforcement Learning
     - title: Bachelor's degree
       institution: Pohang University of Science and Technology (POSTECH) 
       year: 2015-2019
       description:
-        - Major: Creative IT Engineering
+        - Major - Creative IT Engineering
         - Magna cumme laude
 
 - title: Work Experience
