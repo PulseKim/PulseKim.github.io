@@ -1,4 +1,5 @@
 ---
+layout: default
 permalink: /about/
-redirect_to: /
+redirect: /
 ---

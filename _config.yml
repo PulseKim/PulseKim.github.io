@@ -2,12 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Sun Woo Kim's Page # the website title (if blank, full name will be used instead)
+title: Sun Woo Kim # the website title (if blank, full name will be used instead)
 first_name: Sun Woo 
 middle_name: 
 last_name: Kim
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
@@ -93,10 +91,20 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
-permalink: /blog/:year/:title/
+blog_en_name: Sunwoo Kim's blog # blog_name will be displayed in your blog page
+blog_en_description: Hi there
+permalink: /blog_en/:year/:title/
 lsi: false # produce an index for related posts
+
+blog_kr_name: Sunwoo Kim's blog # blog_name will be displayed in your blog page
+blog_kr_description: 김선우의 블로그입니다.
+permalink: /blog_en/:year/:title/
+lsi: false # produce an index for related post
+
+drawings_name: My drawings # blog_name will be displayed in your blog page
+drawings_description: My way of drawing
+permalink: /blog_en/:year/:title/
+lsi: false # produce an index for related post
 
 # Pagination
 pagination:
