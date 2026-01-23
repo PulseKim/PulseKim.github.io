@@ -30,7 +30,7 @@ pagination:
   {% endif %}
 
 
-{% assign featured_posts = site.posts | where: "featured", "true" %}
+{% assign featured_posts = site.posts_kr | where: "featured", "true" %}
 {% if featured_posts.size > 0 %}
 <br>
 
@@ -80,7 +80,7 @@ pagination:
     {% if page.pagination.enabled %}
       {% assign postlist = paginator.posts %}
     {% else %}
-      {% assign postlist = site.posts %}
+      {% assign postlist = site.posts_kr %}
     {% endif %}
 
     {% for post in postlist %}

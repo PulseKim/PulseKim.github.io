@@ -48,27 +48,27 @@
         - Gesture generation for digital human
         - Production ready motion from video sources
 
-- title: Academic collaborations (*During NCSOFT)
-  type: nested_list
-  contents:
-    - title: Symbolic gesture generation
-      items:
-        - Collaborate with RILAB, Korea University, led by Sungjoon Choi
-        - One related paper published
-          -Towards Natural Prosthetic Hand Gestures, A Common-Rig and Diffusion Inpainting Pipeline
-        - One in submission
+# - title: Academic collaborations (*During NCSOFT)
+#   type: nested_list
+#   contents:
+#     - title: Symbolic gesture generation
+#       items:
+#         - Collaborate with RILAB, Korea University, led by Sungjoon Choi
+#         - One related paper published
+#           -Towards Natural Prosthetic Hand Gestures, A Common-Rig and Diffusion Inpainting Pipeline
+#         - One in submission
 
-    - title: Self-collision avoidance 
-      items: 
-        - Collaborate with CALAB at Hanyang University, led by Taesoo Kwon.
-        - Two related paper published
-          - Learning-based Self-Collision Avoidance in Retargeting using Body Part-specific Signed Distance Fields
-          - Efficient inverse-kinematics solver for precise pose reconstruction of skinned 3D models
+#     - title: Self-collision avoidance 
+#       items: 
+#         - Collaborate with CALAB at Hanyang University, led by Taesoo Kwon.
+#         - Two related paper published
+#           - Learning-based Self-Collision Avoidance in Retargeting using Body Part-specific Signed Distance Fields
+#           - Efficient inverse-kinematics solver for precise pose reconstruction of skinned 3D models
       
-    - title: Text-semantic aware gesture generation
-      items:
-        - Collaborate with Grpaphics lab, Gangwon University, led by Jongmin Kim
-        - VQ-VAE based approach
+#     - title: Text-semantic aware gesture generation
+#       items:
+#         - Collaborate with Grpaphics lab, Gangwon University, led by Jongmin Kim
+#         - VQ-VAE based approach
 
 
 
