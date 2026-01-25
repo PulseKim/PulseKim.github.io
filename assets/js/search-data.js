@@ -102,16 +102,16 @@ ninja.data = [{
             },},{id: "news-updated-my-blog",
           title: 'Updated my blog!',
           description: "",
-          section: "News",},{id: "posts_en-test",
-          title: 'test',
-          description: "test",
+          section: "News",},{id: "posts_en-trivia-human-motion-control-of-quadrupedal-robots-using-deep-reinforcement-learning",
+          title: 'Trivia: Human Motion Control of Quadrupedal Robots Using Deep Reinforcement Learning',
+          description: "Trivia",
           section: "Posts_en",handler: () => {
-              window.location.href = "/blog_en/2015/sample/";
-            },},{id: "posts_kr-테스트",
-          title: '테스트',
-          description: "테스트",
+              window.location.href = "/blog_en/2025/HumanConQuad/";
+            },},{id: "posts_kr-trivia-human-motion-control-of-quadrupedal-robots-using-deep-reinforcement-learning",
+          title: 'Trivia: Human Motion Control of Quadrupedal Robots Using Deep Reinforcement Learning',
+          description: "논문에는 없는 여담들",
           section: "Posts_kr",handler: () => {
-              window.location.href = "/blog_kr/2015/sample/";
+              window.location.href = "/blog_kr/2025/HumanConQuad/";
             },},{
         id: 'social-email',
         title: 'email',
