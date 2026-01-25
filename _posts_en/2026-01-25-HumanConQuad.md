@@ -5,6 +5,13 @@ date: 2025-01-25 11:40:16
 description: Trivia
 tags: blog_en, humanconquad
 categories: blog_en
+_styles: |
+  #markdown-content {
+    line-height: 1.8;
+  }
+  #markdown-content p {
+    margin: 1.1em 0;
+  }
 ---
 
 I wanted to share some side stories here that didn’t make it into the paper. I actually started this research almost six years ago and wrapped it up about four years ago, but a lot of my personal thoughts couldn’t go into the paper. Research papers have to be written in a very polished, formal way, so all the trial and error, the dumb mistakes, and the random thoughts that popped into my head along the way just get filtered out.
@@ -65,8 +72,7 @@ I had a slightly different opinion. Standing still would be hard, sure, but if t
 
 Then about a year later, Sehoon published a paper with other researchers showing a quadrupedal robot standing and moving on two legs. The robot moved in a way pretty close to what I had imagined.
 
-TWiRL: Learning and Adapting Agility Skills by Transferring Experience
-https://sites.google.com/berkeley.edu/twirl
+[TWiRL: Learning and Adapting Agility Skills by Transferring Experience](https://sites.google.com/berkeley.edu/twirl)
 
 As far as I know, even now, there’s still almost no research on teleoperating a quadrupedal robot using human motion while it stands on two legs. So if someone wants to continue this line of work, I think this direction is genuinely interesting. Imagine a quadrupedal robot boxing on two legs and then dropping back down to walk on four. The potential applications are wide, and it’s just fun. Hardly anyone has really done it yet. If someone wants to revive this idea, I’d welcome it, and I’d be happy to do a light co-work or share ideas.
 <br>
@@ -128,4 +134,3 @@ I’m also grateful to Professor Jehee, who boldly supported me when I said I wa
 What I really gained from this research wasn’t just the final result. It was a sense for how to start a project, how to mess it up, and how to fix it and keep going. None of that appears in the paper, but personally, it’s become a pretty valuable asset.
 
 And as for human–humanoid teleoperation, I still have more thoughts about that. I’d like to organize them and share them someday when I get the chance. It’s a different direction from this research.
-
