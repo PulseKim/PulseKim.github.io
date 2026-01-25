@@ -43,7 +43,6 @@ For example, if Matt from Digimon Adventure had to fuse with MetalGarurumon and 
 When I first heard this research topic from Professor Sehoon Ha, I was thinking along those lines. The idea of naturally controlling a being with a completely different body, understanding its motion, and designing control methods that fit that form brought back some childhood curiosity. I think that’s why I had so much fun doing this research.
 
 In the end, I approached this work as a question of how to intuitively control a system with a body completely different from a human’s, and how to make it move naturally. And I still think that question has real value.
-<br>
 
 ## Who should imitate whom?
 Early in the project, I talked with Sehoon, who was advising me at the time, about control methods. He suggested that for precise control, the human should imitate a dog. Literally crawling on all fours, swinging their arms, and moving like a dog. Personally, I thought that if the meaning of the motion was similar enough, the result would be similar too. But since he suggested it, I decided to actually try it at home and see what would happen.
@@ -53,7 +52,7 @@ In my tiny studio apartment, I seriously hypnotized myself into thinking “I am
 So at the next meeting, I told him honestly:
 
 <div style="text-align: center; font-style: italic; font-size: 1.2em;"> “I’m going to stand on two legs.” </div>
-
+<br>
 After that, the direction of the research settled on controlling a quadrupedal robot using bipedal human motion. To be fair, the system I built would scale pretty well as long as you prepared the right data, whether you crawled on all fours or stood on your head. But for the demo in the paper, I chose the version where you stand on two legs and control the robot.
 
 
