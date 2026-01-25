@@ -66,7 +66,7 @@ After that, the direction of the research settled on controlling a quadrupedal r
 ## Can a quadrupedal robot walk on two legs?
 This is something I really would have tried if I’d continued this research. But a bunch of things happened, and because of my military service, I ended up joining a game company, NCSOFT. So sadly, I couldn’t explore this direction further.
 
-Back then, I talked about this idea with a friend I met at RSS. He was doing his PhD at MIT (I’m not naming him since I didn’t get his permission). I told him, “Wouldn’t it be fun if a quadrupedal robot stood on two legs and did teleoperation? I even want to try making it box while standing on two legs.” He was pretty skeptical. He thought that because of the motor structure in a quadruped’s legs, you’d get gimbal lock issues and that balancing would be practically impossible.
+Back then, I talked about this idea with a friend I met at RSS conference on 2022. He was doing his PhD at MIT and doing quarupedal research. I told him, “Wouldn’t it be fun if a quadrupedal robot stood on two legs and did teleoperation? I even want to try making it box while standing on two legs.” He was pretty skeptical. He thought that because of the motor structure in a quadruped’s legs, you’d get gimbal lock issues and that balancing would be practically impossible.
 
 I had a slightly different opinion. Standing still would be hard, sure, but if the robot kept stepping lightly, it might be more feasible than it sounds. In the end, both viewpoints were meaningful, and just having that kind of conversation was really fun.
 
