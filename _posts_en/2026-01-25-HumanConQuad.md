@@ -18,7 +18,7 @@ I wanted to share some side stories here that didn’t make it into the paper. I
 
 So here, I want to unpack some of those things. This won’t be a super well-organized story. I’m just going to write whatever comes to mind. The real reasons I got into this research, the kinds of conversations that happened along the way, and the behind-the-scenes stuff. There will be some thoughts about the results too, but this is more about the process and the personal context around it.
 
-<br>
+[Korean Version](https://pulsekim.github.io/blog_kr/2025/HumanConQuad/)
 
 ## Why did I do this research?
 These days, humanoid robots are doing backflips, so my paper can look a bit outdated. We already have robots that walk and run like humans, so human–humanoid teleoperation seems more important. You might even wonder whether we still need quadrupedal robots at all.
