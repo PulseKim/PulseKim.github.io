@@ -36,7 +36,7 @@
   type: time_table
   contents:
     - title: Graphics AI Researcher
-      institution: NC AI (Spun offed from NCSOFT), Kore
+      institution: NC AI (Spun offed from NCSOFT), Korea
       year: 2025
       description:
         - Text to motion retrieval 
