@@ -137,4 +137,5 @@ And as for human–humanoid teleoperation, I still have more thoughts about that
 
 #### Reference
 Dukemon evolution: http://stream1.gifsoup.com/view1/1561404/digimon-evolution-o.gif
+
 Metal Garurumon: https://digimon.net/reference_ko/detail.php?directory_name=metalgarurumon 

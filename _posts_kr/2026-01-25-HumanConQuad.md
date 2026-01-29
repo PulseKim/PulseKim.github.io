@@ -129,5 +129,6 @@ _styles: |
 
 
 #### 출처
-듀크몬 진화: http://stream1.gifsoup.com/view1/1561404/digimon-evolution-o.gif
+듀크몬 진화: http://stream1.gifsoup.com/view1/1561404/digimon-evolution-o.gif 
+
 메탈 가루몬: https://digimon.net/reference_ko/detail.php?directory_name=metalgarurumon 
