@@ -1,5 +1,609 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Trivia: Human Motion Control of Quadrupedal Robots Using Deep Reinforcement Learning | Sun Woo Kim </title> <meta name="author" content="Sun Woo Kim"> <meta name="description" content="논문에는 없는 여담들"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?v=f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?v=62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/PlagueDoc.jpg?v=edb49672ffc930eb7ecbc36b7906ddf5"> <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://pulsekim.github.io/blog_kr/2025/HumanConQuad/"> <script src="/assets/js/theme.js?v=48c9b5bd7f2e0605e39e579400e22553"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      Trivia: Human Motion Control of Quadrupedal Robots Using Deep Reinforcement Learning | Sun Woo Kim
+    
+  
+</title>
+<meta name="author" content="Sun Woo Kim">
+<meta name="description" content="논문에는 없는 여담들">
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=a4b3f509e79c54a512b890d73235ef04">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css?v=f0b7046b84e425c55f3463ac249818f5">
+<link defer rel="stylesheet" href="/assets/css/scholar-icons.css?v=62b2ac103a88034e6882a5be5f3e2772">
+<link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap">
+
+<!-- Code Syntax Highlighting -->
+<link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light">
+
+
+
+<!-- Styles -->
+
+
+
+
+  <link rel="shortcut icon" href="/assets/img/PlagueDoc.jpg?v=edb49672ffc930eb7ecbc36b7906ddf5">
+
+<link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
+<link rel="canonical" href="https://pulsekim.github.io/blog_kr/2025/HumanConQuad/">
+
+
+  <!-- Dark Mode -->
+  <script src="/assets/js/theme.js?v=48c9b5bd7f2e0605e39e579400e22553"></script>
+  <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark">
+  <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Sun Woo Kim </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog_en/index.html">blog_en </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog_kr/index.html">blog_kr </a> </li> <li class="nav-item "> <a class="nav-link" href="/drawings/index.html">drawings </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <style type="text/css">#markdown-content{line-height:1.8}#markdown-content p{margin:1.1em 0}</style> <div class="post"> <header class="post-header"> <h1 class="post-title">Trivia: Human Motion Control of Quadrupedal Robots Using Deep Reinforcement Learning</h1> <p class="post-meta"> Created on January 25, 2025 </p> <p class="post-tags"> <i class="fa-solid fa-calendar fa-sm"></i> 2025   ·   <i class="fa-solid fa-hashtag fa-sm"></i> blog_kr,   <i class="fa-solid fa-hashtag fa-sm"></i> humanconquad   ·   <i class="fa-solid fa-tag fa-sm"></i> blog_kr </p> </header> <article class="post-content"> <div id="markdown-content"> <p>블로그에는 논문에 들어가지 않은 여담들을 좀 공유해보려고 한다. 이 연구를 사실 지금이 아니라, 거의 6년 전에 시작해서 4년 전에 마무리했는데 개인적인 생각들은 논문에는 담을 수가 없었다. 연구 자체는 최대한 정제된 형태로 써야 하니까, 시행착오나 삽질, 그리고 그냥 떠오르는 잡생각 같은 것들은 전부 빠져버린다.</p> <p>그래서 여기서는 그런 것들을 조금 풀어보려고 한다. 엄청 잘 정리된 이야기가 아니라, 그냥 그때그때 생각나는 대로 쓸 예정이다. 왜 이런 연구를 하게 됐는지에 대한 진짜 생각과, 중간에 어떤 이야기가 오갔는지, 그런 뒷이야기들을 그냥 편하게 적어놓고자 한다. 연구의 결과에 대한 생각도 포함되겠지만, 그 과정에서 있었던 일들과 개인적인 맥락에 더 가까운 이야기들이다.</p> <h2 id="왜-이런-연구를-했을까">왜 이런 연구를 했을까?</h2> <p>요즘은 휴머노이드 로봇이 백플립을 하는 시대라서 내 논문이 out-dated되어 보이기도 한다. 이미 사람처럼 걷고 뛰는 로봇이 나오니까 사람과 휴머노이드간의 텔레오퍼레이션이 더 중요해 보이지, 굳이 네 발 로봇이 필요할지 의문이 들기도 한다.</p> <p>하지만 나는 사족보행 로봇이 여전히 실용적인 메리트를 가진다고 생각한다. 구조적으로 안정성이 높고, 지형 적응력이 뛰어나며, 무게 대비 하중 지지 능력도 좋다. 울퉁불퉁한 지형이나 재난 현장, 야외 환경에서는 오히려 휴머노이드보다 더 현실적인 선택이 될 수 있다. 더 나아가 내 연구를 더 발전시킨다면 곤충형 로봇 같이 사람과 전혀 다른 형태의 로봇에도 적용시켜 볼 수 있을 것이다. 이런 로봇들은 휴머노이드 기술이 아무리 발전하더라도 고유한 장점과 쓰임새를 가질 거라고 본다.</p> <p><strong>사실 이 연구를 한 아주 개인적인 이유도 있다.</strong> 나는 디지몬을 정말 좋아한다. 디지몬 테이머즈에서 궁극체가 되면 사람이 디지몬과 합체해서 조종하는 설정이 있다. 사람이 공격하면 디지몬도 공격하고 걸으면 걷고 이런거다. 그런데 가끔 이런 상상을 해본다. 테이머즈에서는 궁극체가 되면 대부분 인수형 디지몬으로 진화하는데, 만약 그렇지 않았다면 어땠을까?</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <video src="/assets/video/duke.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" autoplay="" controls=""></video> </figure> </div> </div> <div class="caption"> 듀크몬의 예시. 사실 나는 테리어몬을 더 좋아한다. </div> <p>예를 들어, 디지몬 어드벤처의 매튜가 메탈가루루몬과 합체해서 조종해야 한다면 그는 어떻게 움직여야 할까? 사람처럼 걷는 게 아니라, 네 발로 달리고, 고개를 흔들고, 균형을 잡아야 하지 않을까. 조종 방식도, 감각도, 인터페이스도 전혀 달라질 것이다.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <img src="/assets/img/metal.webp" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <div class="caption"> 궁극체가 메탈 가루몬이면 네 발로 기어야 할까? </div> <p>처음 하세훈교수님께 이 주제를 들었을 때 나는 이런 생각을 하면서 연구를 진행했다. 사람과 이형적인 몸을 가진 존재를 자연스럽게 조종하고, 그 움직임을 이해하고, 그 형태에 맞는 제어 방식을 만드는 것이 내 유년 시절 궁금증을 끄집어 냈기에 연구를 참 재밌게 할 수 있었던것 같다.</p> <p>결국 이 연구는 인간과 전혀 다른 몸을 가진 시스템을 어떻게 직관적으로 다루고, 자연스럽게 움직이게 만들 것인가에 대한 질문이라고 생각하고 접근했고, 실제로 그 가치를 지닌다고 본다.</p> <h2 id="누가-누구를-따라해야할까">누가 누구를 따라해야할까?</h2> <p>이 프로젝트를 초창기에 지도해주신 하세훈 교수님과 컨트롤 방법에 대해 이야기해본 적이 있다. 교수님께서는 정확한 컨트롤을 위해서는 사람이 개를 따라해야 한다는 의견을 주셨다. 말 그대로 네 발로 기면서 팔을 휘두르고, 개처럼 움직이는 방식을 제안해주신 거다. 나는 개인적으로 모션의 의미만 충분히 비슷하면 결과도 비슷해질 거라고 생각했다. 그래도 교수님께서 말씀주신대로 어떻게 되는지 보자는 마음으로 집에서 혼자 연습을 해봤다.</p> <p>자취방에서 진지하게 “나는 개다”라고 자기 최면을 걸고 네 발로 걸어보고, 팔도 휘둘러봤다. 그런데 이게 생각보다 동작이 어려웠고, 직관적이지도 않았다. 3살 이후부터는 평생 두 발로 걸어왔는데 네 발의 직관을 다시 얻기란 쉬운 일이 아니었다. 무엇보다 약간 인간의 존엄성에 문제가 있다는 느낌이 들었다. 내가 이걸 왜 하고 있지? 같은 현자타임이 왔다.</p> <p>그리고 다음 주 미팅 때 교수님께 솔직하게 말씀드렸다.</p> <div style="text-align: center; font-style: italic; font-size: 1.2em;"> “저는 두 발로 서겠습니다.” </div> <p><br> 그 이후로 사람의 이족보행 모션을 기반으로 네 발 로봇을 컨트롤하는 방향으로 연구가 굳어졌다. 물론 나의 논문 결과는 네 발로 기든 물구나무를 서든 상관없이 데이터만 준비하면 꽤 scalable하게 작동하는 시스템이지만 논문을 쓰는 데모를 위해서는 두 발로 서서 컨트롤하는 방식을 택했다.</p> <h2 id="4족-보행-로봇이-두-다리로-걸을-수-있지-않을까">4족 보행 로봇이 두 다리로 걸을 수 있지 않을까?</h2> <p>이건 만약 내가 이 연구를 계속했으면 진짜로 해봤을 것 같은 아이디어다. 일이 좀 겹치면서 결국 병역 때문에 게임회사인 NCSOFT에 합류하게 됐고, 그래서 이 방향은 정말 아쉽게도 더 파보지 못했다.</p> <p>당시 RSS 학회에서 만난 한 친구랑 이 얘기를 해본 적이 있다. MIT에서 박사하고 있던 친구였는데 (이 글은 동의 안 받고 쓰는 거라 이름은 안 밝히겠다) 나는 “사족 보행 로봇이 두 발로 서서 텔레오퍼레이션 하면 재밌지 않겠냐, 심지어 두 발로 서서 복싱하는 것도 해보고 싶다” 같은 얘기를 했다. 그 친구는 꽤 회의적이었다. 사족 보행 로봇 다리 쪽 모터 구조 때문에 짐벌 락 같은 문제가 생겨서 밸런스 잡는 게 사실상 불가능할 거라고 봤다. 나는 의견이 조금 달랐다. 가만히 서서 버티는 건 힘들겠지만, 잔발을 계속 밟으면서 움직이면 생각보다 버틸 수 있지 않을까 싶었다. 결과적으로 둘 다 꽤 의미 있는 관점이었고, 그냥 이런 얘기 주고받는 것 자체가 되게 즐거웠다.</p> <p>그리고 1년쯤 뒤에 하세훈 교수님이 다른 연구자들과 같이 쓴 논문에서 사족 보행 로봇이 두 다리로 서서 움직이는 연구가 나왔다. 내 생각과 비슷하게 로봇이 움직였다.</p> <p><a href="https://sites.google.com/berkeley.edu/twirl" rel="external nofollow noopener" target="_blank">TWiRL: Learning and Adapting Agility Skills by Transferring Experience</a></p> <p>내가 아는 한, 지금까지도 사족 보행 로봇이 두 발로 서서 사람 모션으로 텔레오퍼레이션 하는 연구는 아직 거의 없다. 그래서 혹시 이 연구를 이어서 해보고 싶은 사람이 있다면, 이 방향도 충분히 재미있을 거라고 생각한다. 사족 보행 로봇이 서서 권투를 하다가 다시 사족으로 걷는다고 생각하면 활용처도 많고 무척 흥미로울 것 같다. 아직 아무도 제대로 안 한 영역이다. 혹시 누군가 이 아이디어를 되살릴 생각이 있다면 환영하며, 기회가 되면 코웍 같은 거 해봐도 좋을 것 같다.</p> <h2 id="어떻게-매핑할-것인가">어떻게 매핑할 것인가?</h2> <p>이 연구 얘기하면 제일 많이 받는 질문 중 하나가 이거다. 사실 관련해서는 스토리가 있다.</p> <p>처음에는 여러 가지 사람에서 사족보행 로봇으로 가는 매우 strict한 매핑 함수를 도입하는 방향을 고민했다. IK도 해봤고, RBF 기반 방법도 시도해봤다. 근데 이런 식으로 가면, 의미가 조금만 복잡해져도 고려할 게 너무 많아진다. 매핑 규칙이 늘어날수록 예외도 늘어나고, 튜닝 포인트도 끝이 없어진다.</p> <p>여기서 이제희 교수님의 아이디어가 나왔다. strict한 매핑 규칙이 아니라, 뉴럴 네트워크를 이용한 흐물흐물한 매핑이었다. 지금 보면 당연해 보이는 아이디어인데, 그때는 진짜 머리를 한 대 맞은 것 같은 느낌이었다. 매핑이 내 맘대로 정확히 안 되면 어떤가? 이건 teleoperation이고, 애초에 매우 intuitive한 컨트롤러다. 팔을 뻗었는데 내가 생각한 것보다 더 나아가면, 내가 조금 덜 뻗으면 되는 거 아닌가? 왼쪽으로 몇 센티 오차가 나든 말든 이건 중요한 문제가 아니었던 것이다. 이건 정확한 매핑이 중요한 태스크가 아니었기 때문에 성립하는 아이디어였다.</p> <p>그럼 데이터셋을 어떻게 구성해야, 최소한의 데이터로도 내가 컨트롤 가능한 매핑이 나올까? 아이디어는 이거였다. 해당 모션의 끝 범위에 해당하는 포즈 몇 개랑, 중간 트랜지션 모션 몇 개만 찍어서 네트워크에 주면, 중간은 네트워크가 알아서 잘 infer해줄 거라는 가정이었다.</p> <p>예를 들어 팔을 뻗는 태스크에서는, 내가 뻗을 수 있는 최대치의 모션이랑, 로봇의 range of motion이 허용하는 최대 모션 정도만 매핑해서 데이터로 주면, 중간의 휘두르는 모션은 대충이라도 나올 거라고 생각했다. 그리고 실제로도 그렇게 됐다. 물론 딱 그 데이터만 준 건 아니고, 중간에 꽤 휴리스틱한 튜닝이랑 추가 데이터 컬렉션은 있었다. 그래도 기본적인 아이디어는 저렇다.</p> <p>핵심은, 매핑이 조금 느슨해도 내 몸을 잘 쓰면 컨트롤은 문제가 없다는 거였다. 이건 정확한 수치 매칭 문제가 아니라, 사람-로봇 인터페이스 문제에 더 가까웠다.</p> <h2 id="재밌는-보행-패턴">재밌는 보행 패턴</h2> <p>이 연구를 하면서 예상 못 한, 꽤 재밌는 보행 패턴도 발견했다. 사족 보행 로봇이 물리 환경에서 웬만한 locomotion 입력에도 대응할 수 있게 만들고 싶어서, 학습할 때 reference motion의 gait parameters를 일부러 랜덤하게 바꿨다. 예를 들면 body height, foot clearance height, swing angle 같은 것들이다. 한 에피소드에서 한 가지 패턴만 계속 따라 하게 하는 게 아니라, 이런 파라미터들을 주기적으로 랜덤하게 바꿔주며 학습시키는 방식이었다.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <video src="/assets/video/LocomotionAgile.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" autoplay="" controls=""></video> </figure> </div> </div> <div class="caption"> 왼쪽 시뮬레이션 / 오른쪽 레퍼런스 모션 </div> <p>근데 이걸 생각보다 빠른 주기로 바꿔도 로봇이 꽤 안정적으로 잘 동작하는 게 신기했다. “이 정도로 막 바꿔도 되네?” 싶은 느낌이었다.</p> <p>더 놀라웠던 건, 이게 시뮬레이션만이 아니라 현실 로봇에서도 잘 동작했다는 점이다. 실제 하드웨어에서는 약 3-5초마다 보행 패턴이 바뀌도록 설정했는데도, 로봇이 흔들리긴 하지만 넘어지지 않고 계속 걸었다. 이걸 보고 두 지도교수님 모두 “이게 된다고?” 같은 반응이었다.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <video src="/assets/video/Strange.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" autoplay="" controls=""></video> </figure> </div> </div> <div class="caption"> What????? </div> <p>그때 딱 느꼈다. 아, 하드웨어가 우리가 예전에 생각하던 것보다 훨씬 robust해졌구나. 예전 같았으면 이런 식의 랜덤한 보행 파라미터 변화는 바로 넘어짐으로 이어졌을 텐데, 이제는 꽤 과감하게 실험해도 버텨주는 단계까지 와 있었다. 그 순간이 개인적으로 꽤 인상 깊었다.</p> <h2 id="마치며">마치며</h2> <p>우선 그 시절의 나를 떠올리면 아직도 좀 민망하다. 진짜 아무것도 모르던 초짜 상태였는데, 그런 나를 이끌어서 결국 논문까지 만들어내게 해주신 하세훈 교수님께 죄송스럽고 또 감사드린다. 지금도 내가 좋은 연구자라고 말하긴 어렵지만, 그래도 이제는 뭘 모르는지는 아는 상태까지는 온 것 같다. 그런데 그때의 나는 진짜 백지 그 자체였다 뭘 아는지조차 모른는 상태였다. 그런 상태에서 직접 연구를 지도해주셨다는 게 지금 생각해보면 더더욱 감사한 일이다.</p> <p>그렇게 뭣도모르던 내가 하세훈 교수님께 공동지도를 받겠다고 했을 때 과감하게 밀어주신 이제희교수님께도 감사드린다. NCSOFT까지 합치면 거의 6년간 지도를 받았는데, 매번 핵심을 찌르는 통찰력에 감탄하고 놀란다. 항상 그 부분은 본받고 싶지만 하루이틀에 쌓이는 내공은 아닌것 같다.</p> <p>이 연구를 하면서 얻은 것들은 결과물 자체보다도, 연구를 어떻게 시작하고, 어떻게 망하고, 어떻게 다시 고쳐서 이어가는지에 대한 감각이었던 것 같다. 그건 논문 어디에도 안 적혀 있지만, 개인적으로는 꽤 큰 자산으로 남아 있다.</p> <p>그리고 사람–휴머노이드 텔레오퍼레이션에 대해서는, 사실 아직도 할 말이 좀 남아 있다. 이건 나중에 기회 되면 따로 한 번 정리해서 공유해보고 싶다. 이 연구랑은 또 다른 방향의 이야기다.</p> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Sun Woo Kim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?v=2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script> <script>
+  </script>
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Sun Woo Kim
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">about
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/publications/">publications
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/cv/">cv
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/blog_en/index.html">blog_en
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item active">
+                  <a class="nav-link" href="/blog_kr/index.html">blog_kr
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/drawings/index.html">drawings
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+          
+            <!-- Search -->
+            <li class="nav-item">
+              <button id="search-toggle" title="Search" onclick="openSearchModal()">
+                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
+              </button>
+            </li>
+          
+          
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="ti ti-sun-moon" id="light-toggle-system"></i>
+                <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
+                <i class="ti ti-sun-filled" id="light-toggle-light"></i>
+              </button>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        
+
+
+
+
+
+  <!-- Page/Post style -->
+  <style type="text/css">
+    #markdown-content {
+  line-height: 1.8;
+}
+#markdown-content p {
+  margin: 1.1em 0;
+}
+
+  </style>
+
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Trivia: Human Motion Control of Quadrupedal Robots Using Deep Reinforcement Learning</h1>
+    <p class="post-meta">
+      Created on January 25, 2025
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <i class="fa-solid fa-calendar fa-sm"></i> 2025
+      
+      
+          ·  
+        
+          
+            <i class="fa-solid fa-hashtag fa-sm"></i> blog_kr,
+          
+          
+             
+          
+        
+          
+            <i class="fa-solid fa-hashtag fa-sm"></i> humanconquad
+          
+          
+        
+      
+
+      
+          ·  
+        
+          
+            <i class="fa-solid fa-tag fa-sm"></i> blog_kr
+          
+          
+        
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p>블로그에는 논문에 들어가지 않은 여담들을 좀 공유해보려고 한다. 이 연구를 사실 지금이 아니라, 거의 6년 전에 시작해서 4년 전에 마무리했는데 개인적인 생각들은 논문에는 담을 수가 없었다. 연구 자체는 최대한 정제된 형태로 써야 하니까, 시행착오나 삽질, 그리고 그냥 떠오르는 잡생각 같은 것들은 전부 빠져버린다.</p>
+
+<p>그래서 여기서는 그런 것들을 조금 풀어보려고 한다. 엄청 잘 정리된 이야기가 아니라, 그냥 그때그때 생각나는 대로 쓸 예정이다. 왜 이런 연구를 하게 됐는지에 대한 진짜 생각과, 중간에 어떤 이야기가 오갔는지, 그런 뒷이야기들을 그냥 편하게 적어놓고자 한다. 연구의 결과에 대한 생각도 포함되겠지만, 그 과정에서 있었던 일들과 개인적인 맥락에 더 가까운 이야기들이다.</p>
+
+<h2 id="왜-이런-연구를-했을까">왜 이런 연구를 했을까?</h2>
+<p>요즘은 휴머노이드 로봇이 백플립을 하는 시대라서 내 논문이 out-dated되어 보이기도 한다. 이미 사람처럼 걷고 뛰는 로봇이 나오니까 사람과 휴머노이드간의 텔레오퍼레이션이 더 중요해 보이지, 굳이 네 발 로봇이 필요할지 의문이 들기도 한다.</p>
+
+<p>하지만 나는 사족보행 로봇이 여전히 실용적인 메리트를 가진다고 생각한다. 구조적으로 안정성이 높고, 지형 적응력이 뛰어나며, 무게 대비 하중 지지 능력도 좋다. 울퉁불퉁한 지형이나 재난 현장, 야외 환경에서는 오히려 휴머노이드보다 더 현실적인 선택이 될 수 있다. 더 나아가 내 연구를 더 발전시킨다면 곤충형 로봇 같이 사람과 전혀 다른 형태의 로봇에도 적용시켜 볼 수 있을 것이다. 이런 로봇들은 휴머노이드 기술이 아무리 발전하더라도 고유한 장점과 쓰임새를 가질 거라고 본다.</p>
+
+<p><strong>사실 이 연구를 한 아주 개인적인 이유도 있다.</strong>  나는 디지몬을 정말 좋아한다. 디지몬 테이머즈에서 궁극체가 되면 사람이 디지몬과 합체해서 조종하는 설정이 있다. 사람이 공격하면 디지몬도 공격하고 걸으면 걷고 이런거다. 그런데 가끔 이런 상상을 해본다. 테이머즈에서는 궁극체가 되면 대부분 인수형 디지몬으로 진화하는데, 만약 그렇지 않았다면 어땠을까?</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+<figure>
+  
+    <video src="/assets/video/duke.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" autoplay="" controls=""></video>
+
+  
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    듀크몬의 예시. 사실 나는 테리어몬을 더 좋아한다.
+</div>
+
+<p>예를 들어, 디지몬 어드벤처의 매튜가 메탈가루루몬과 합체해서 조종해야 한다면 그는 어떻게 움직여야 할까? 사람처럼 걷는 게 아니라, 네 발로 달리고, 고개를 흔들고, 균형을 잡아야 하지 않을까. 조종 방식도, 감각도, 인터페이스도 전혀 달라질 것이다.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+
+
+<figure>
+  <picture>
+    <!-- Auto scaling with imagemagick -->
+    <!--
+      See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
+      https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
+    -->
+    
+    <img src="/assets/img/metal.webp" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    궁극체가 메탈 가루몬이면 네 발로 기어야 할까?
+</div>
+
+<p>처음 하세훈교수님께 이 주제를 들었을 때 나는 이런 생각을 하면서 연구를 진행했다. 사람과 이형적인 몸을 가진 존재를 자연스럽게 조종하고, 그 움직임을 이해하고, 그 형태에 맞는 제어 방식을 만드는 것이 내 유년 시절 궁금증을 끄집어 냈기에 연구를 참 재밌게 할 수 있었던것 같다.</p>
+
+<p>결국 이 연구는 인간과 전혀 다른 몸을 가진 시스템을 어떻게 직관적으로 다루고, 자연스럽게 움직이게 만들 것인가에 대한 질문이라고 생각하고 접근했고, 실제로 그 가치를 지닌다고 본다.</p>
+
+<h2 id="누가-누구를-따라해야할까">누가 누구를 따라해야할까?</h2>
+<p>이 프로젝트를 초창기에 지도해주신 하세훈 교수님과 컨트롤 방법에 대해 이야기해본 적이 있다. 교수님께서는 정확한 컨트롤을 위해서는 사람이 개를 따라해야 한다는 의견을 주셨다. 말 그대로 네 발로 기면서 팔을 휘두르고, 개처럼 움직이는 방식을 제안해주신 거다. 나는 개인적으로 모션의 의미만 충분히 비슷하면 결과도 비슷해질 거라고 생각했다. 그래도 교수님께서 말씀주신대로 어떻게 되는지 보자는 마음으로 집에서 혼자 연습을 해봤다.</p>
+
+<p>자취방에서 진지하게 “나는 개다”라고 자기 최면을 걸고 네 발로 걸어보고, 팔도 휘둘러봤다. 그런데 이게 생각보다 동작이 어려웠고, 직관적이지도 않았다. 3살 이후부터는 평생 두 발로 걸어왔는데 네 발의 직관을 다시 얻기란 쉬운 일이 아니었다. 무엇보다 약간 인간의 존엄성에 문제가 있다는 느낌이 들었다. 내가 이걸 왜 하고 있지? 같은 현자타임이 왔다.</p>
+
+<p>그리고 다음 주 미팅 때 교수님께 솔직하게 말씀드렸다.</p>
+
+<div style="text-align: center; font-style: italic; font-size: 1.2em;">
+“저는 두 발로 서겠습니다.”
+</div>
+<p><br>
+그 이후로 사람의 이족보행 모션을 기반으로 네 발 로봇을 컨트롤하는 방향으로 연구가 굳어졌다. 물론 나의 논문 결과는 네 발로 기든 물구나무를 서든 상관없이 데이터만 준비하면 꽤 scalable하게 작동하는 시스템이지만 논문을 쓰는 데모를 위해서는 두 발로 서서 컨트롤하는 방식을 택했다.</p>
+
+<h2 id="4족-보행-로봇이-두-다리로-걸을-수-있지-않을까">4족 보행 로봇이 두 다리로 걸을 수 있지 않을까?</h2>
+
+<p>이건 만약 내가 이 연구를 계속했으면 진짜로 해봤을 것 같은 아이디어다. 일이 좀 겹치면서 결국 병역 때문에 게임회사인 NCSOFT에 합류하게 됐고, 그래서 이 방향은 정말 아쉽게도 더 파보지 못했다.</p>
+
+<p>당시 RSS 학회에서 만난 한 친구랑 이 얘기를 해본 적이 있다. MIT에서 박사하고 있던 친구였는데 (이 글은 동의 안 받고 쓰는 거라 이름은 안 밝히겠다) 나는 “사족 보행 로봇이 두 발로 서서 텔레오퍼레이션 하면 재밌지 않겠냐, 심지어 두 발로 서서 복싱하는 것도 해보고 싶다” 같은 얘기를 했다. 그 친구는 꽤 회의적이었다. 사족 보행 로봇 다리 쪽 모터 구조 때문에 짐벌 락 같은 문제가 생겨서 밸런스 잡는 게 사실상 불가능할 거라고 봤다. 나는 의견이 조금 달랐다. 가만히 서서 버티는 건 힘들겠지만, 잔발을 계속 밟으면서 움직이면 생각보다 버틸 수 있지 않을까 싶었다. 결과적으로 둘 다 꽤 의미 있는 관점이었고, 그냥 이런 얘기 주고받는 것 자체가 되게 즐거웠다.</p>
+
+<p>그리고 1년쯤 뒤에 하세훈 교수님이 다른 연구자들과 같이 쓴 논문에서 사족 보행 로봇이 두 다리로 서서 움직이는 연구가 나왔다. 내 생각과 비슷하게 로봇이 움직였다.</p>
+
+<p><a href="https://sites.google.com/berkeley.edu/twirl" rel="external nofollow noopener" target="_blank">TWiRL: Learning and Adapting Agility Skills by Transferring Experience</a></p>
+
+<p>내가 아는 한, 지금까지도 사족 보행 로봇이 두 발로 서서 사람 모션으로 텔레오퍼레이션 하는 연구는 아직 거의 없다. 그래서 혹시 이 연구를 이어서 해보고 싶은 사람이 있다면, 이 방향도 충분히 재미있을 거라고 생각한다. 사족 보행 로봇이 서서 권투를 하다가 다시 사족으로 걷는다고 생각하면 활용처도 많고 무척 흥미로울 것 같다. 아직 아무도 제대로 안 한 영역이다. 혹시 누군가 이 아이디어를 되살릴 생각이 있다면 환영하며, 기회가 되면 코웍 같은 거 해봐도 좋을 것 같다.</p>
+
+<h2 id="어떻게-매핑할-것인가">어떻게 매핑할 것인가?</h2>
+
+<p>이 연구 얘기하면 제일 많이 받는 질문 중 하나가 이거다. 사실 관련해서는 스토리가 있다.</p>
+
+<p>처음에는 여러 가지 사람에서 사족보행 로봇으로 가는 매우 strict한 매핑 함수를 도입하는 방향을 고민했다. IK도 해봤고, RBF 기반 방법도 시도해봤다. 근데 이런 식으로 가면, 의미가 조금만 복잡해져도 고려할 게 너무 많아진다. 매핑 규칙이 늘어날수록 예외도 늘어나고, 튜닝 포인트도 끝이 없어진다.</p>
+
+<p>여기서 이제희 교수님의 아이디어가 나왔다. strict한 매핑 규칙이 아니라, 뉴럴 네트워크를 이용한 흐물흐물한 매핑이었다. 지금 보면 당연해 보이는 아이디어인데, 그때는 진짜 머리를 한 대 맞은 것 같은 느낌이었다. 매핑이 내 맘대로 정확히 안 되면 어떤가? 이건 teleoperation이고, 애초에 매우 intuitive한 컨트롤러다. 팔을 뻗었는데 내가 생각한 것보다 더 나아가면, 내가 조금 덜 뻗으면 되는 거 아닌가? 왼쪽으로 몇 센티 오차가 나든 말든 이건 중요한 문제가 아니었던 것이다. 이건 정확한 매핑이 중요한 태스크가 아니었기 때문에 성립하는 아이디어였다.</p>
+
+<p>그럼 데이터셋을 어떻게 구성해야, 최소한의 데이터로도 내가 컨트롤 가능한 매핑이 나올까? 아이디어는 이거였다. 해당 모션의 끝 범위에 해당하는 포즈 몇 개랑, 중간 트랜지션 모션 몇 개만 찍어서 네트워크에 주면, 중간은 네트워크가 알아서 잘 infer해줄 거라는 가정이었다.</p>
+
+<p>예를 들어 팔을 뻗는 태스크에서는, 내가 뻗을 수 있는 최대치의 모션이랑, 로봇의 range of motion이 허용하는 최대 모션 정도만 매핑해서 데이터로 주면, 중간의 휘두르는 모션은 대충이라도 나올 거라고 생각했다. 그리고 실제로도 그렇게 됐다. 물론 딱 그 데이터만 준 건 아니고, 중간에 꽤 휴리스틱한 튜닝이랑 추가 데이터 컬렉션은 있었다. 그래도 기본적인 아이디어는 저렇다.</p>
+
+<p>핵심은, 매핑이 조금 느슨해도 내 몸을 잘 쓰면 컨트롤은 문제가 없다는 거였다. 이건 정확한 수치 매칭 문제가 아니라, 사람-로봇 인터페이스 문제에 더 가까웠다.</p>
+
+<h2 id="재밌는-보행-패턴">재밌는 보행 패턴</h2>
+
+<p>이 연구를 하면서 예상 못 한, 꽤 재밌는 보행 패턴도 발견했다. 사족 보행 로봇이 물리 환경에서 웬만한 locomotion 입력에도 대응할 수 있게 만들고 싶어서, 학습할 때 reference motion의 gait parameters를 일부러 랜덤하게 바꿨다. 예를 들면 body height, foot clearance height, swing angle 같은 것들이다. 한 에피소드에서 한 가지 패턴만 계속 따라 하게 하는 게 아니라, 이런 파라미터들을 주기적으로 랜덤하게 바꿔주며 학습시키는 방식이었다.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+<figure>
+  
+    <video src="/assets/video/LocomotionAgile.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" autoplay="" controls=""></video>
+
+  
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    왼쪽 시뮬레이션 / 오른쪽 레퍼런스 모션
+</div>
+
+<p>근데 이걸 생각보다 빠른 주기로 바꿔도 로봇이 꽤 안정적으로 잘 동작하는 게 신기했다. “이 정도로 막 바꿔도 되네?” 싶은 느낌이었다.</p>
+
+<p>더 놀라웠던 건, 이게 시뮬레이션만이 아니라 현실 로봇에서도 잘 동작했다는 점이다. 실제 하드웨어에서는 약 3-5초마다 보행 패턴이 바뀌도록 설정했는데도, 로봇이 흔들리긴 하지만 넘어지지 않고 계속 걸었다. 이걸 보고 두 지도교수님 모두 “이게 된다고?” 같은 반응이었다.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+<figure>
+  
+    <video src="/assets/video/Strange.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" autoplay="" controls=""></video>
+
+  
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    What?????
+</div>
+
+<p>그때 딱 느꼈다. 아, 하드웨어가 우리가 예전에 생각하던 것보다 훨씬 robust해졌구나. 예전 같았으면 이런 식의 랜덤한 보행 파라미터 변화는 바로 넘어짐으로 이어졌을 텐데, 이제는 꽤 과감하게 실험해도 버텨주는 단계까지 와 있었다. 그 순간이 개인적으로 꽤 인상 깊었다.</p>
+
+<h2 id="마치며">마치며</h2>
+
+<p>우선 그 시절의 나를 떠올리면 아직도 좀 민망하다. 진짜 아무것도 모르던 초짜 상태였는데, 그런 나를 이끌어서 결국 논문까지 만들어내게 해주신 하세훈 교수님께 죄송스럽고 또 감사드린다. 지금도 내가 좋은 연구자라고 말하긴 어렵지만, 그래도 이제는 뭘 모르는지는 아는 상태까지는 온 것 같다. 그런데 그때의 나는 진짜 백지 그 자체였다 뭘 아는지조차 모른는 상태였다. 그런 상태에서 직접 연구를 지도해주셨다는 게 지금 생각해보면 더더욱 감사한 일이다.</p>
+
+<p>그렇게 뭣도모르던 내가 하세훈 교수님께 공동지도를 받겠다고 했을 때 과감하게 밀어주신 이제희교수님께도 감사드린다. NCSOFT까지 합치면 거의 6년간 지도를 받았는데, 매번 핵심을 찌르는 통찰력에 감탄하고 놀란다. 항상 그 부분은 본받고 싶지만 하루이틀에 쌓이는 내공은 아닌것 같다.</p>
+
+<p>이 연구를 하면서 얻은 것들은 결과물 자체보다도, 연구를 어떻게 시작하고, 어떻게 망하고, 어떻게 다시 고쳐서 이어가는지에 대한 감각이었던 것 같다. 그건 논문 어디에도 안 적혀 있지만, 개인적으로는 꽤 큰 자산으로 남아 있다.</p>
+
+<p>그리고 사람–휴머노이드 텔레오퍼레이션에 대해서는, 사실 아직도 할 말이 좀 남아 있다. 이건 나중에 기회 되면 따로 한 번 정리해서 공유해보고 싶다. 이 연구랑은 또 다른 방향의 이야기다.</p>
+
+<h4 id="출처">출처</h4>
+<p>듀크몬 진화: http://stream1.gifsoup.com/view1/1561404/digimon-evolution-o.gif
+메탈 가루몬: https://digimon.net/reference_ko/detail.php?directory_name=metalgarurumon</p>
+
+    </div>
+  </article>
+
+  
+
+  
+
+  
+    
+      
+
+
+
+    
+  
+
+  
+  
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->
+    
+
+
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      
+  © Copyright 2026
+  Sun Woo
+  
+  Kim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
+
+  
+  
+
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+
+  <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/masonry.js?v=a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script>
+
+
+
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script>
+<script defer src="/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script>
+<script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script>
+
+<!-- Badges -->
+
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+
+
+  <!-- MathJax -->
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script>
+  
+    <script src="/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script>
+    <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+  <!-- Scrolling Progress Bar -->
+  <script defer src="/assets/js/progress-bar.js?v=2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script>
+
+
+
+
+
+
+
+  <!-- Back to Top -->
+  <script src="/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script>
+  <script>
     addBackToTop();
-  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?v=a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?v=6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?v=6f508d74becd347268a7f822bca7309d"></script> </body> </html>
+  </script>
+
+
+
+  <!-- Search -->
+  <script type="module" src="/assets/js/search/ninja-keys.min.js?v=a3446f084dcaecc5f75aa1757d087dcf"></script>
+  <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys>
+  <script src="/assets/js/search-setup.js?v=6c304f7b1992d4b60f7a07956e52f04a"></script>
+  <script src="/assets/js/search-data.js"></script>
+  <script src="/assets/js/shortcut-key.js?v=6f508d74becd347268a7f822bca7309d"></script>
+
+
+
+
+  </body>
+</html>
