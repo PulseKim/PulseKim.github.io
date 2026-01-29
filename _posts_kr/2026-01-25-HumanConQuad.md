@@ -126,3 +126,8 @@ _styles: |
 이 연구를 하면서 얻은 것들은 결과물 자체보다도, 연구를 어떻게 시작하고, 어떻게 망하고, 어떻게 다시 고쳐서 이어가는지에 대한 감각이었던 것 같다. 그건 논문 어디에도 안 적혀 있지만, 개인적으로는 꽤 큰 자산으로 남아 있다.
 
 그리고 사람–휴머노이드 텔레오퍼레이션에 대해서는, 사실 아직도 할 말이 좀 남아 있다. 이건 나중에 기회 되면 따로 한 번 정리해서 공유해보고 싶다. 이 연구랑은 또 다른 방향의 이야기다.
+
+
+#### 출처
+듀크몬 진화: http://stream1.gifsoup.com/view1/1561404/digimon-evolution-o.gif
+메탈 가루몬: https://digimon.net/reference_ko/detail.php?directory_name=metalgarurumon 

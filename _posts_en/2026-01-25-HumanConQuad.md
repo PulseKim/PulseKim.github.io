@@ -134,3 +134,7 @@ I’m also grateful to Professor Jehee, who boldly supported me when I said I wa
 What I really gained from this research wasn’t just the final result. It was a sense for how to start a project, how to mess it up, and how to fix it and keep going. None of that appears in the paper, but personally, it’s become a pretty valuable asset.
 
 And as for human–humanoid teleoperation, I still have more thoughts about that. I’d like to organize them and share them someday when I get the chance. It’s a different direction from this research.
+
+#### Reference
+Dukemon evolution: http://stream1.gifsoup.com/view1/1561404/digimon-evolution-o.gif
+Metal Garurumon: https://digimon.net/reference_ko/detail.php?directory_name=metalgarurumon 
