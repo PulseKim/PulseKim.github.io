@@ -13,6 +13,7 @@ _styles: |
     margin: 1.1em 0;
   }
 ---
+[English Version](https://pulsekim.github.io/blog_en/2026/MotionQuality/)
 
 이 글은 아직 정리가 덜 된, 말 그대로 주저리주저리한 글이다. 정돈된 글을 기대한 분들에게는 미리 사과드린다.
 
