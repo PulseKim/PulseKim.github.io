@@ -99,7 +99,10 @@ ninja.data = [{
           description: "Hellsing",
           section: "Drawings",handler: () => {
               window.location.href = "/drawings/Tubalcain/";
-            },},{id: "news-updated-my-blog",
+            },},{id: "news-joined-sfu",
+          title: 'Joined SFU!',
+          description: "",
+          section: "News",},{id: "news-updated-my-blog",
           title: 'Updated my blog!',
           description: "",
           section: "News",},{id: "posts_en-trivia-human-motion-control-of-quadrupedal-robots-using-deep-reinforcement-learning",
@@ -107,11 +110,21 @@ ninja.data = [{
           description: "Trivia",
           section: "Posts_en",handler: () => {
               window.location.href = "/blog_en/2025/HumanConQuad/";
+            },},{id: "posts_en-sure-we-should-talk-about-animation-quality",
+          title: 'Sure, we should talk about animation quality',
+          description: "About motion quality",
+          section: "Posts_en",handler: () => {
+              window.location.href = "/blog_en/2026/MotionQuality/";
             },},{id: "posts_kr-trivia-human-motion-control-of-quadrupedal-robots-using-deep-reinforcement-learning",
           title: 'Trivia: Human Motion Control of Quadrupedal Robots Using Deep Reinforcement Learning',
           description: "논문에는 없는 여담들",
           section: "Posts_kr",handler: () => {
               window.location.href = "/blog_kr/2025/HumanConQuad/";
+            },},{id: "posts_kr-sure-we-should-talk-about-animation-quality",
+          title: 'Sure, we should talk about animation quality',
+          description: "애니메이션 퀄리티에 대하여",
+          section: "Posts_kr",handler: () => {
+              window.location.href = "/blog_kr/2026/MotionQuality/";
             },},{
         id: 'social-email',
         title: 'email',
