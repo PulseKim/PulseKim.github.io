@@ -89,4 +89,10 @@ Video kill the mocap system? My answer in my heart is, “Not yet, and no in the
 If someone wants to do research based on the ideas I wrote above, I am always open. We can work together, or not. Even if someone just gets inspired by this blog and produces good results, I would still be very happy. And if I learn about such research later, I think I would feel quite proud.
 
 #### Reference
-Let's talk about animation Quality: https://theorangeduck.com/page/animation-quality
+The buggles - Video kill the radio star, https://www.youtube.com/watch?v=W8r-tXRLazs
+How to use video reference for animatio, https://www.youtube.com/watch?v=UkWnwHwMapQ 
+Motion Actor Inc, https://www.youtube.com/@MotionActorInc 
+Game-like motion in a business suit.  https://www.youtube.com/watch?v=8mRvRbBJOTo
+WHAM https://wham.is.tue.mpg.de/
+GVHMR https://zju3dv.github.io/gvhmr/
+MVLIFT https://lijiaman.github.io/projects/mvlift/
