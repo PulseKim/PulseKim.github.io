@@ -115,6 +115,11 @@ ninja.data = [{
           description: "About motion quality",
           section: "Posts_en",handler: () => {
               window.location.href = "/blog_en/2026/MotionQuality/";
+            },},{id: "posts_en-video-kill-the-mocap-system",
+          title: 'Video Kill the Mocap System?',
+          description: "Thoughts about Video-to-motion",
+          section: "Posts_en",handler: () => {
+              window.location.href = "/blog_en/2026/2026-0213-VideoKillTheMocapStar/";
             },},{id: "posts_kr-trivia-human-motion-control-of-quadrupedal-robots-using-deep-reinforcement-learning",
           title: 'Trivia: Human Motion Control of Quadrupedal Robots Using Deep Reinforcement Learning',
           description: "논문에는 없는 여담들",
@@ -125,6 +130,11 @@ ninja.data = [{
           description: "애니메이션 퀄리티에 대하여",
           section: "Posts_kr",handler: () => {
               window.location.href = "/blog_kr/2026/MotionQuality/";
+            },},{id: "posts_kr-video-kill-the-mocap-system",
+          title: 'Video Kill the Mocap System?',
+          description: "Video to Motion에 대한 생각",
+          section: "Posts_kr",handler: () => {
+              window.location.href = "/blog_kr/2026/2026-0213-VideoKillTheMocapStar/";
             },},{
         id: 'social-email',
         title: 'email',
