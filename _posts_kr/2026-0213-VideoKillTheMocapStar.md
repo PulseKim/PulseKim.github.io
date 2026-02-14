@@ -13,7 +13,7 @@ _styles: |
     margin: 1.1em 0;
   }
 ---
-[English Version]()
+[English Version](https://pulsekim.github.io/blog_en/2026/2026-0213-VideoKillTheMocapStar/)
 
 나의 블로그가 늘 그렇듯, 이 글 역시 정리가 덜 된 글이다. 누군가에게는 공감되지 않는 이야기일 수도 있다.
 
@@ -34,7 +34,7 @@ _styles: |
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/img/mocap.png" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include figure.liquid loading="eager" path="assets/img/mocap.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -75,7 +75,7 @@ Root의 움직임도 매우 큰 이슈이다. 간혹 video to motion연구 데�
 
 또한 데이터 out-of-distribution이슈도 많은 영향을 미친다. 고품질 모션 데이터는 상대적으로 그 양이 적고, 비디오-모션 쌍으로 된 데이터는 더더욱 적다. 또한 위에서 말한 이슈로 인하여 데이터 밖에 있는 샘플은 매우 얻기가 힘들며, 이런 이슈로 인해 학습에 어려움을 겪기도 한다. 이 문제는 재작년 즈음 Karen liu 교수님과 한 번 개인적으로 이야기 해 본적이 있었는데, 나중에 [Lifting Motion to the 3D World via 2D Diffusion](https://lijiaman.github.io/projects/mvlift/)연구에서 정말 상상하지도 못한 멋진 아이디어를 보여주셨다. 
 
-모션을 부드럽게 만드려면 모션의 디테일이 다 죽어버리고, 반대의 경우 튀는 모션이 발생하는 trade-off도 골치 아픈 문제다. 마지막으로 비디오 데이터가 주로 30fps인것도 문제이다. Daniel holden이 말했듯, 모션은 최소 60Hz는 되어야 최소한의 디테일을 볼 수 있다. 퀄리티 측면에서 30fps는 치명적이다. 
+파생되는 문제 중에 모션을 부드럽게 만드려면 모션의 디테일이 다 죽어버리고, 반대의 경우 튀는 모션이 발생하는 trade-off도 골치 아픈 문제다. 마지막으로 비디오 데이터가 주로 30fps인것도 문제이다. Daniel holden이 말했듯, 모션은 최소 60Hz는 되어야 최소한의 디테일을 볼 수 있다. 퀄리티 측면에서 30fps는 치명적이다. 
 
 이런 문제들은 한동안 나 혼자 생각해 보던 것들이었고, 언젠가 논문으로 정리해볼까도 고민했지만 요즘은 다른 연구에 집중하느라 깊게 파고들지는 못하고 있다. 그래도 누군가 이 문제를 해결해 준다면 나 역시 그 결과를 활용할 수 있을 것 같아 이렇게 적어본다.
 

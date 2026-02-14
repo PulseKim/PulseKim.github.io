@@ -13,7 +13,7 @@ _styles: |
     margin: 1.1em 0;
   }
 ---
-[Korean Version]()
+[Korean Version](https://pulsekim.github.io/blog_kr/2026/2026-0213-VideoKillTheMocapStar/)
 
 As with most posts on my blog, this one is also somewhat unstructured. It may not resonate with everyone.
 
@@ -34,7 +34,7 @@ To obtain high-quality optical mocap data, you need a large studio equipped with
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/img/mocap.png" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include figure.liquid loading="eager" path="assets/img/mocap.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
