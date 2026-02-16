@@ -7,6 +7,7 @@
       {% assign latest_posts = site[latest_posts_collection] %}
     {% endif %}
     {% assign latest_posts_size = latest_posts | size %}
+    {% assign latest_posts = latest_posts | sort: 'date' | reverse %}
     <div
       class="table-responsive"
       {% if page.latest_posts.scrollable and latest_posts_size > 3 %}
