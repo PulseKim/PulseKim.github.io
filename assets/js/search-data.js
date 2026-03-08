@@ -64,6 +64,11 @@ ninja.data = [{
           description: "Happy two friends",
           section: "Drawings",handler: () => {
               window.location.href = "/drawings/Happy/";
+            },},{id: "drawings-howl-39-s-moving-castle",
+          title: 'Howl&amp;#39;s Moving Castle',
+          description: "Can you imagine?",
+          section: "Drawings",handler: () => {
+              window.location.href = "/drawings/Howls_Moving_Castle/";
             },},{id: "drawings-me",
           title: 'Me',
           description: "Me myself",
@@ -94,11 +99,6 @@ ninja.data = [{
           description: "Hellsing",
           section: "Drawings",handler: () => {
               window.location.href = "/drawings/Tubalcain/";
-            },},{id: "drawings-howl-39-s-moving-castle",
-          title: 'Howl&amp;#39;s Moving Castle',
-          description: "Can you imagine?",
-          section: "Drawings",handler: () => {
-              window.location.href = "/drawings/Howls_Moving_Castle/";
             },},{id: "drawings-revolution",
           title: 'Revolution',
           description: "Don&#39;t you know talking about a revolution sounds..",
