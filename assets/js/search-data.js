@@ -99,6 +99,11 @@ ninja.data = [{
           description: "Hellsing",
           section: "Drawings",handler: () => {
               window.location.href = "/drawings/Tubalcain/";
+            },},{id: "drawings-revolution",
+          title: 'Revolution',
+          description: "Don&#39;t you know talking about a revolution sounds..",
+          section: "Drawings",handler: () => {
+              window.location.href = "/drawings/Revolution/";
             },},{id: "news-joined-sfu",
           title: 'Joined SFU!',
           description: "",
