@@ -46,4 +46,4 @@ In short, building a truly general motion auto-encoder remains extremely challen
 Why does research exist? There are many possible answers, but personally, I believe it exists to influence society in meaningful ways. While doing research, it is easy to become overly focused on benchmark numbers. If evaluation metrics perfectly reflected real-world usefulness, then maximizing those numbers would make complete sense. Most widely used evaluation metrics today are still imperfect. I try to keep that in mind as I move forward with my work. Animation quality is just one facet of that broader concern. I want to keep reminding myself to focus on solving real problems, not problems created solely for the sake of metrics.
 
 #### Reference
-Let's talk about animation Quality: https://theorangeduck.com/page/animation-quality
+* Let's talk about animation Quality: https://theorangeduck.com/page/animation-quality

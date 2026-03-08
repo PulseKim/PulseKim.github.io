@@ -86,10 +86,10 @@ Video kill the mocap system? 내 마음 속의 대답은 "아직은 No고 미래
 
 
 #### 출처
-The buggles - Video kill the radio star, https://www.youtube.com/watch?v=W8r-tXRLazs
-How to use video reference for animatio, https://www.youtube.com/watch?v=UkWnwHwMapQ 
-Motion Actor Inc, https://www.youtube.com/@MotionActorInc 
-Game-like motion in a business suit.  https://www.youtube.com/watch?v=8mRvRbBJOTo
-WHAM https://wham.is.tue.mpg.de/
-GVHMR https://zju3dv.github.io/gvhmr/
-MVLIFT https://lijiaman.github.io/projects/mvlift/
+* The buggles - Video kill the radio star, https://www.youtube.com/watch?v=W8r-tXRLazs
+* How to use video reference for animatio, https://www.youtube.com/watch?v=UkWnwHwMapQ 
+* Motion Actor Inc, https://www.youtube.com/@MotionActorInc 
+* Game-like motion in a business suit.  https://www.youtube.com/watch?v=8mRvRbBJOTo
+* WHAM https://wham.is.tue.mpg.de/
+* GVHMR https://zju3dv.github.io/gvhmr/
+* MVLIFT https://lijiaman.github.io/projects/mvlift/

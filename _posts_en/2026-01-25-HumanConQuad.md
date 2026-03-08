@@ -136,6 +136,5 @@ What I really gained from this research wasn’t just the final result. It was a
 And as for human–humanoid teleoperation, I still have more thoughts about that. I’d like to organize them and share them someday when I get the chance. It’s a different direction from this research.
 
 #### Reference
-Dukemon evolution: http://stream1.gifsoup.com/view1/1561404/digimon-evolution-o.gif
-
-Metal Garurumon: https://digimon.net/reference_ko/detail.php?directory_name=metalgarurumon 
+* Dukemon evolution: http://stream1.gifsoup.com/view1/1561404/digimon-evolution-o.gif
+* Metal Garurumon: https://digimon.net/reference_ko/detail.php?directory_name=metalgarurumon 
