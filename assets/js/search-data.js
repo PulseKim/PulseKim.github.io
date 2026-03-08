@@ -125,6 +125,11 @@ ninja.data = [{
           description: "Thoughts about Video-to-motion",
           section: "Posts_en",handler: () => {
               window.location.href = "/blog_en/2026/2026-0213-VideoKillTheMocapStar/";
+            },},{id: "posts_en-animation-in-a-robotics-era",
+          title: 'Animation in a robotics era',
+          description: "Why animation, of all things, in a robotics era?",
+          section: "Posts_en",handler: () => {
+              window.location.href = "/blog_en/2026/WhyAnimation/";
             },},{id: "posts_kr-trivia-human-motion-control-of-quadrupedal-robots-using-deep-reinforcement-learning",
           title: 'Trivia: Human Motion Control of Quadrupedal Robots Using Deep Reinforcement Learning',
           description: "논문에는 없는 여담들",
@@ -140,6 +145,11 @@ ninja.data = [{
           description: "Video to Motion에 대한 생각",
           section: "Posts_kr",handler: () => {
               window.location.href = "/blog_kr/2026/2026-0213-VideoKillTheMocapStar/";
+            },},{id: "posts_kr-animation-in-a-robotics-era",
+          title: 'Animation in a robotics era',
+          description: "왜 하필 지금 애니메이션인가?",
+          section: "Posts_kr",handler: () => {
+              window.location.href = "/blog_kr/2026/WhyAnimation/";
             },},{
         id: 'social-email',
         title: 'email',
