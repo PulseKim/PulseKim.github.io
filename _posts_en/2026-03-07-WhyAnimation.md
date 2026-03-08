@@ -54,7 +54,7 @@ In animation research, there have long been efforts to generate movements that n
 
 This perspective is not limited to humanoid robots. Even if robots with entirely different morphologies are developed, these ideas could help design movements that feel natural and useful. For instance, one can imagine how a robot inspired by [marine animals such as an octopus](https://mrl.snu.ac.kr/publications/ProjectSoftCon/SoftCon.html) might move. Even if we create a strange [chimera-like character](https://mrl.snu.ac.kr/research/ProjectChimera/Chimera.html) for functional purposes, it should still be possible to design and apply motions that are natural for that body.
 
-## What next?
+## What's next?
 At a time when robots can already perform tumbling motions, what else can we explore next? I do have a few ideas, but since I still have my own research to do, I cannot lay everything out here. I am still a PhD student, so I should probably focus on doing my own research well.
 
 That said, one challenge at a high level is still closing the gap between simulation and the real world. Of course, robots can already tumble and perform martial arts. But what I mean is moving toward motions that are **more natural and more stable**. Ultimately, I believe the goal is to make robots gradually resemble humans in the way they move.
