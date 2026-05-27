@@ -130,6 +130,11 @@ ninja.data = [{
           description: "Why animation, of all things, in a robotics era?",
           section: "Posts_en",handler: () => {
               window.location.href = "/blog_en/2026/WhyAnimation/";
+            },},{id: "posts_en-trivia-body-gesture-generation-for-multimodal-conversational-agents",
+          title: 'Trivia: Body Gesture Generation for Multimodal Conversational Agents',
+          description: "Gesture and Animation",
+          section: "Posts_en",handler: () => {
+              window.location.href = "/blog_en/2026/BodyGesture/";
             },},{id: "posts_kr-trivia-human-motion-control-of-quadrupedal-robots-using-deep-reinforcement-learning",
           title: 'Trivia: Human Motion Control of Quadrupedal Robots Using Deep Reinforcement Learning',
           description: "논문에는 없는 여담들",
@@ -150,6 +155,11 @@ ninja.data = [{
           description: "왜 하필 지금 애니메이션인가?",
           section: "Posts_kr",handler: () => {
               window.location.href = "/blog_kr/2026/WhyAnimation/";
+            },},{id: "posts_kr-trivia-body-gesture-generation-for-multimodal-conversational-agents",
+          title: 'Trivia: Body Gesture Generation for Multimodal Conversational Agents',
+          description: "회사에서 논문을 쓴다는 것",
+          section: "Posts_kr",handler: () => {
+              window.location.href = "/blog_kr/2026/BodyGesture/";
             },},{
         id: 'social-email',
         title: 'email',
