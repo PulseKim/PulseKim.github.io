@@ -3,8 +3,8 @@ layout: post
 title: Animation in a robotics era
 date: 2026-03-07 14:00:16
 description: Why animation, of all things, in a robotics era?
-tags: blog_kr, thoughts
-categories: blog_kr
+tags: blog_en, thoughts
+categories: blog_en
 _styles: |
   #markdown-content {
     line-height: 1.8;
