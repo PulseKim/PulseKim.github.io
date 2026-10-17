@@ -1,5 +1,676 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Phd FOMO | Sun Woo Kim </title> <meta name="author" content="Sun Woo Kim"> <meta name="description" content="Surviving the LLM Era as a PhD Student"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?v=f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?v=62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/PlagueDoc.jpg?v=edb49672ffc930eb7ecbc36b7906ddf5"> <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://pulsekim.github.io/blog_kr/2026/FOMO/"> <script src="/assets/js/theme.js?v=48c9b5bd7f2e0605e39e579400e22553"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      Phd FOMO | Sun Woo Kim
+    
+  
+</title>
+<meta name="author" content="Sun Woo Kim">
+<meta name="description" content="Surviving the LLM Era as a PhD Student">
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=a4b3f509e79c54a512b890d73235ef04">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css?v=f0b7046b84e425c55f3463ac249818f5">
+<link defer rel="stylesheet" href="/assets/css/scholar-icons.css?v=62b2ac103a88034e6882a5be5f3e2772">
+<link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap">
+
+<!-- Code Syntax Highlighting -->
+<link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light">
+
+
+
+<!-- Styles -->
+
+
+
+
+  <link rel="shortcut icon" href="/assets/img/PlagueDoc.jpg?v=edb49672ffc930eb7ecbc36b7906ddf5">
+
+<link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
+<link rel="canonical" href="https://pulsekim.github.io/blog_kr/2026/FOMO/">
+
+
+  <!-- Dark Mode -->
+  <script src="/assets/js/theme.js?v=48c9b5bd7f2e0605e39e579400e22553"></script>
+  <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark">
+  <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Sun Woo Kim </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog_en/index.html">blog_en </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog_kr/index.html">blog_kr </a> </li> <li class="nav-item "> <a class="nav-link" href="/drawings/index.html">drawings </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <style type="text/css">@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");.post-header{margin-bottom:2rem;padding:3rem 0 1.5rem;text-align:center}.post-header .post-title--expanded{display:flex;flex-direction:column;align-items:center;gap:.75rem;margin:0 auto;color:#080808;font-size:1rem;line-height:1;animation:fomo-appear 850ms ease-out both}.post-header .post-title-main{color:#080808;font-family:"Great Vibes","Snell Roundhand","Edwardian Script ITC",cursive;font-size:clamp(5.2rem,9.5vw,7rem);font-style:normal;font-weight:400;letter-spacing:-0.015em;line-height:.88;font-variant-ligatures:common-ligatures discretionary-ligatures;text-shadow:none;transform:none}.post-header .post-title-expansion{white-space:nowrap;color:#252525;font-family:"Times New Roman",Times,serif;font-size:clamp(0.85rem,1.5vw,1.05rem);font-style:normal;font-weight:400;letter-spacing:.14em;line-height:1.2;text-transform:uppercase}.post-header .post-subtitle{max-width:38rem;margin:1.45rem auto 1.5rem;color:var(--global-text-color-light);font-family:"MaruBuri",Georgia,serif;font-size:clamp(0.9rem,1.7vw,1.02rem);font-style:normal;font-weight:400;letter-spacing:.015em;line-height:1.5}#markdown-content{line-height:1.8}#markdown-content p{margin:1.1em 0}@keyframes fomo-appear{0%{opacity:0;filter:blur(7px);transform:scale(1.025)}52%{opacity:.78;filter:blur(0.4px);transform:translateX(-1px) scale(1)}56%{opacity:.42;transform:translateX(1px) scale(1)}63%,100%{opacity:1;filter:blur(0);transform:translateX(0) scale(1)}}@media(prefers-reduced-motion:reduce){.post-header .post-title--expanded{animation:none;filter:none}}@media(max-width:600px){.post-header{padding-top:2.4rem}.post-header .post-title-main{font-size:clamp(4.6rem,23vw,5.9rem)}.post-header .post-title-expansion{white-space:normal;font-size:clamp(0.76rem,3.8vw,0.92rem);letter-spacing:.1em}}</style> <div class="post"> <header class="post-header"> <h1 class="post-title post-title--expanded"> <span class="post-title-main">Phd FOMO</span> <span class="post-title-expansion">(Fear of Missing Out)</span> </h1> <p class="post-subtitle">Surviving the LLM Era as a PhD Student</p> <p class="post-meta"> Created on October 17, 2026 </p> <p class="post-tags"> <i class="fa-solid fa-calendar fa-sm"></i> 2026   ·   <i class="fa-solid fa-hashtag fa-sm"></i> blog_kr,   <i class="fa-solid fa-hashtag fa-sm"></i> thoughts   ·   <i class="fa-solid fa-tag fa-sm"></i> blog_kr </p> </header> <article class="post-content"> <div id="markdown-content"> <p><a href="https://pulsekim.github.io/blog_en/2026/FOMO">English Version</a></p> <p>지난 NeurIPS에는 3만 편이 넘는 논문이, 내년도 ICLR에는 4만 3천 편이 넘는 논문이 제출되었다. 이렇게 논문이 쏟아지는 가운데 arXiv는 한 달에 두 편이라는 투고 제한을 걸었다. RSS는 LLM 사용 확대와 투고 급증에 대비해, 2027년부터 연구의 가설과 방법을 먼저 심사하고 리뷰어의 피드백을 반영해 논문을 완성하는 2단계 <a href="https://roboticsconference.org/information/cfp/" rel="external nofollow noopener" target="_blank">심사 제도</a>를 도입하기까지 했다.</p> <p>그리고 나는 1년에 논문을 한 편 쓸까 말까 한다.</p> <h2 id="phd-fomo">Phd FOMO</h2> <p>몇 달 전이었던가, 매일 아침 일어나서 공포에 사로잡히던 때가 있었다. 혹시 자는 사이에 누군가 내가 하고 있는 연구를 발표하지는 않았을까. 비슷한 제목의 논문을 발견하면 일단 심장이 내려앉았다. 그런 날들이 반복되면서 스트레스가 쌓였고, 살면서 처음으로 멜라토닌에 의지해 잠을 청하기도 했다. 내 연구가 가치 없다고 생각해서 생기는 불안은 아니었다. 오히려 가치 있다고 믿기 때문에 무서웠다. 이 문제가 중요하고, 이 접근이 의미 있다고 생각하는데, 누군가 먼저 깃발을 꽂으면 어떻게 될까. 내가 몇 달 동안 고민하고 실험한 것이 이미 누군가가 해버린, 새로울 것 없는 연구가 될까 두려웠다. 그리고 나도 이 연구판에서 크게 뒤처지는 게 아닐까 두려웠다. 연구에서 내가 느끼는 FOMO는 대충 그런 것이었다.</p> <h2 id="back-then">Back Then</h2> <p>2019년 대학원 생활을 시작하면서 연구 분야로 Graphics를 고른 이유 중 하나는 ML이나 CV에 비해 덜 급하게 연구할 수 있을 것 같아서였다. 연구의 사이클이 조금 더 길고, 내가 무엇을 하고 있는지 돌아보면서 쫓기지 않고 일할 수 있지 않을까 싶었다. 적어도 당시의 나는 그렇게 느꼈다.</p> <p>실제로 한동안은 그랬다. 2022년 RSS에 제출한 논문은 2020년 초쯤 함께 연구를 시작해서 2022년 1월에 제출하기까지 거의 2년이 걸렸다. 그럼에도 마음은 여유로웠다. 누구도 이런 짓을 하고 있을 것 같지 않았다.</p> <p>2024년 SIGGRAPH Asia 논문도 비슷했다. 연구 자체는 2023년 겨울에 이미 끝나 있었지만, 회사 내부의 이런저런 사정으로 이후 5개월 동안 글 작업을 하다가 5월에 논문을 제출했다. 그래도 큰 부담은 없었다. 제스처 연구를 하는 사람이 많지 않았고, 한 1년쯤 천천히 글을 써도 아주 비슷한 연구가 먼저 나올 것 같지는 않았다.</p> <p>물론 모든 연구가 그렇듯, 연구에서 오는 스트레스는 있었다. 다만 어떻게 하면 이 문제를 풀 수 있을지가 고민이었지, 누군가 먼저 풀고 있을까 봐 걱정하지는 않았다.</p> <h2 id="fomo-in-the-physical-ai-era">FOMO in the Physical AI ERA</h2> <p>2025년부터 Physical AI가 전 세계적인 화두가 되면서 분위기가 달라졌다. 그전까지 내 분야가 메인 포커스에서 살짝 비껴나 있었다면, 이제는 모두가 달려드는 분야가 되었다. 한편에서는 LLM이 분기마다 놀라운 결과를 내놓는다.</p> <p>새 논문을 따라가는 것만으로도 시간이 부족한데, 내 연구도 해야 한다. 2025년 다시 박사과정으로 돌아와 보니, 이제 내 분야도 경쟁이 꽤 치열해져 있었다. 그리고 한 번도 해본 적 없는 깃발 꽂기 경쟁에 나도 참여하게 되었다. 조금 쉬었다 가면 한참 뒤처질 것 같았다. 그렇게 내 FOMO가 시작되었다.</p> <p>그래도 어쩌겠는가. 내가 두렵다고 해서 세상이 멈춰주는 것은 아니었다. 오히려 변화는 점점 더 빨라지고 있었다. 결국 나도 어떻게든 FOMO를 다루면서 연구를 계속하고 있다. 어쩌면 지금도 마음 한구석에는 FOMO가 있지만 어찌저찌 잘 억누르고 있는 것일지도 모르겠다. 그래도 지금은 공포에 떨기만 하지는 않는다는 게 중요한 것 같다.</p> <p>오늘은 그 과정에서 도움이 되었던 개인적인 경험을 공유하려고 한다. FOMO를 극복했다고 하기는 어렵지만, 적어도 조금은 억누를 수 있었던 방법들이다. 나는 크게 두 가지 측면에서 이 문제를 바라봤다. 연구 내적으로 FOMO를 다루는 법과 연구 외적으로 공포와 스트레스를 관리하는 법.</p> <h2 id="연구-내적--유연한-남탓">연구 내적 : 유연한 남탓</h2> <p>게임을 좋아하는 한국인이라면 이 밈에 익숙할 것이다. ‘유연한 남탓’. 연구에서도 이 사고방식은 FOMO를 다루는 데 많은 도움이 되었다.</p> <h4 id="academia-is-unfair">Academia Is Unfair</h4> <p>첫째로, Academia가 불공평하다는 사실을 받아들이는 것이다. 어렸을 때는 사회가 무척 불공평하다고 느꼈고, Academia야말로 이상적이고 순수하고 아름다운 세상일 줄 알았다. 하지만 이곳도 불공평하다는 걸 인정해야 FOMO를 느끼는 상황에서도 버틸 수 있다.</p> <p>이 말은 조금 조심스럽다. 불공평한 상황을 당연하게 받아들이자는 것은 아니다. 다만 거기서 생기는 차이까지 전부 내 능력과 성실함의 문제로 받아들이면 버티기가 어렵다. 간혹 AI로 대강 실험하고 딸깍해서 쓴 것처럼 보이는 논문이 좋은 학회에 붙는데, 내가 1년간 피땀 흘려 쓴 논문은 떨어지는 일도 있다. 물론 남의 논문에 얼마나 많은 노력이 들어갔는지 내가 다 알 수는 없다. 그래도 그런 결과를 마주하면 억울한 마음이 드는 것은 어쩔 수 없다. 그때마다 내가 부족해서 그렇다고 스스로를 갉아먹으면 FOMO는 더 심해진다. 때로는 원래 불공평한 세상에서 이번에는 운이 좋지 않았다고 생각할 수 있어야 다음을 위한 동력이 생긴다.</p> <p>물론 이 말을 잘못 받아들이면 누구와도 소통하지 않고 자기 생각만 고집하는 사람이 될 수 있으니 주의해야 한다. 내가 말하고자 하는 것은 의미 있는 일에 내가 할 수 있는 최선을 다하되, 결과에는 조금 초연해질 필요가 있다는 것이다. 나에게는 이 분야가 원래 불공평하고, 좋은 과정이 늘 좋은 결과를 보장하지는 않는다는 점을 기억하는 것이 도움이 되었다.</p> <h4 id="when-in-doubt-trust-your-supervisor">When in Doubt, Trust Your Supervisor</h4> <p>지도교수를 믿는 것도 도움이 된다. 지도교수가 유능하다고 믿고 따르자. 연구가 잘 안되면 속으로는 그의 탓을 하는 것을 추천한다.</p> <p>비슷한 논문 하나가 나오면 나는 당장 큰일이 난 것 같지만, 교수님은 다르게 볼 수도 있다. 이 방향으로 계속 가도 되는지, 어디를 바꿔야 하는지, 정말 걱정할 만한 상황인지 판단하는 데 도움을 주실 수 있다. 대다수의 지도교수는 우리보다 연구 경험이 훨씬 많다. 그 경험과 판단을 믿는 편이 혼자 모든 것을 판단하고 책임지려는 것보다 낫다. 그리고 그것도 지도교수의 역할이라고 생각한다. (글을 쓰다 보니 내 지도교수님들께 꽤 죄송해진다. 늘 감사해야겠다.)</p> <p>그런데 이 글을 읽는 당신이 교수라면 아쉽게도 내가 해줄 수 있는 말이 없다. 아직 나는 대학원생이라 교수의 고충을 안다고 말할 수는 없다. 세상의 모든 교수님께 감사를 보낼 따름이다.</p> <h4 id="no-two-studies-are-exactly-alike">No Two Studies Are Exactly Alike</h4> <p>완벽히 같은 연구는 없다는 것도 자주 떠올리려고 한다. 비슷한 문제를 풀어도 가정이 다르고, 방법이 다르고, 적용한 범위도 다르다. 이런 작은 차이에서 예상하지 못한 발견을 할 수도 있고, 그것이 하나의 contribution으로 이어질 수도 있다. 비슷한 논문이 나왔다고 내 연구가 곧바로 의미 없어지는 것은 아니다.</p> <p>물론 실제로 기여가 겹칠 수 있고, 그러면 방향을 수정해야 할 수도 있다. 그래도 그 판단은 논문을 제대로 읽고 나서 할 일이다. 제목만 보고 내 연구가 의미 없어졌다고 생각할 필요는 없다. 얼마나 겹치는지, 내가 더 해볼 수 있는 것은 무엇인지부터 확인해야 한다.</p> <h2 id="연구-외적-환기가-필요하다">연구 외적: 환기가 필요하다.</h2> <p>밴쿠버는 날씨가 좋다. 정정한다. 적어도 비가 오지 않으면 정말 좋다. 그런 날 밖에 나가서 조금 걷다 보면, 논문 걱정도 좀 덜하게 된다. 책상 앞에서는 계속 같은 생각만 하다가도 밖에 나가면 좀 괜찮아질 때가 있다. 어디에 살든 연구 말고 다른 데 눈을 돌릴 만한 것이 하나쯤은 있을 것이다. 나에게는 밖에 나가서 바람을 쐬고 하늘을 보는 것이 큰 도움이 되었다.</p> <h4 id="enjoy-your-leisure-time">Enjoy Your Leisure Time</h4> <p>취미는 머리를 식히는 데 도움이 된다. 뒤처진다는 공포가 심할 때는 이런 활동도 사치라고 느껴져 더 일에 집착하게 되겠지만, 잠깐 다른 데 신경을 쓰는 것도 필요하다. 책을 읽어도 좋다. 운동을 해도 좋다. 게임도 좋다. <a href="https://store.steampowered.com/app/1049590/Eternal_Return/" rel="external nofollow noopener" target="_blank">이터널 리턴</a>, 지금 바로 다운로드하세요.</p> <p>농담 같지만 연구 외에 집중할 수 있는 일이 있다는 건 꽤 중요하다. 쉬는 시간에도 논문을 보고, LinkedIn에서 다른 사람의 성과를 확인하면 쉬어도 별로 쉰 것 같지 않다. 여담이지만, 나에게 LinkedIn은 정말 PhD FOMO를 양산하는 미디어 같다. FOMO가 심할 때는 의도적으로 LinkedIn에 접속하지 않는 것도 방법이다. 잠깐이라도 다른 데 집중하고 돌아오면 좀 낫다.</p> <h4 id="friends-and-family">Friends and Family</h4> <p>개인적으로 가장 큰 힘이 되는 것은 가족과 친구다. 내 논문이 어느 학회에 붙는지, 내 방법이 얼마나 새로운지와 상관없이 나를 대해주는 사람들이 있다는 것. 연구가 잘 안 풀려도 같이 밥 먹고 별것 아닌 이야기를 하다 보면 기분이 좀 나아진다. 가족과 친구들과 보내는 시간이 치유가 될 때도 있다.</p> <h4 id="alternatives">Alternatives</h4> <p>당장 의지할 사람이 없다면 애니메이션 캐릭터에라도 감정이입을 해보는 건 어떨까. 나는 팔을 물어뜯기고도 전진하는 엘빈 스미스 단장을 종종 생각한다. 상황은 불합리하고, 노력한다고 좋은 결과가 보장되는 것도 아니다. 그래도 그 안에서 뭔가 발버둥이라도 쳐보는 것이다. 좀 뜬금없지만 나는 이런 게 도움이 된다.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <img src="/assets/img/erwin.jpeg" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <div class="caption"> 스스메! </div> <h2 id="결론">결론</h2> <p>이렇게 적었다고 내가 FOMO를 극복한 것은 아니다. 내일 아침 비슷한 논문을 보면 또 심장이 내려앉을지도 모른다. 그래도 그때마다 지금까지 한 일이 전부 의미 없었다고 생각하지는 않으려고 한다.</p> <p>Academia는 불합리하다. 그리고 우리는 그 안에서 무엇인가를 해보겠다고 스스로 들어왔다. 들어올 때 이 정도일 줄 알았느냐고 하면 할 말은 없지만, 어쨌든 지금은 여기 있다.</p> <p>공포가 몰려오는 것은 어쩔 수 없다. 그래도 중심을 잡으면서 내가 하려던 연구를 계속해보려고 한다. 아직 풀리지 않은 문제가 있고, 내가 확인하고 싶은 것도 남아 있으니까.</p> <p>장인어른께서 우리 부부에게 주신 글귀가 있다.</p> <p>“우보천리.”</p> <p>소의 걸음으로도 천 리를 간다는 뜻이다. 오늘도 나는 말처럼 달리지는 못하더라도, 소의 걸음으로 한 걸음을 걸으려고 한다.</p> <h4 id="reference">Reference</h4> <ul> <li>RSS: https://roboticsconference.org/</li> <li>Eternal Retrun : https://store.steampowered.com/app/1049590/Eternal_Return/</li> <li>Attack on Titan: https://blog.naver.com/cowhdals1111/222857609362</li> </ul> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Sun Woo Kim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?v=2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script> <script>
+  </script>
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Sun Woo Kim
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">about
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/publications/">publications
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/cv/">cv
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/blog_en/index.html">blog_en
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                
+                <li class="nav-item active">
+                  <a class="nav-link" href="/blog_kr/index.html">blog_kr
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/drawings/index.html">drawings
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+          
+            <!-- Search -->
+            <li class="nav-item">
+              <button id="search-toggle" title="Search" onclick="openSearchModal()">
+                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
+              </button>
+            </li>
+          
+          
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="ti ti-sun-moon" id="light-toggle-system"></i>
+                <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
+                <i class="ti ti-sun-filled" id="light-toggle-light"></i>
+              </button>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        
+
+
+
+
+
+  <!-- Page/Post style -->
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+.post-header {
+  margin-bottom: 2rem;
+  padding: 3rem 0 1.5rem;
+  text-align: center;
+}
+
+.post-header .post-title--expanded {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 auto;
+  color: #080808;
+  font-size: 1rem;
+  line-height: 1;
+  animation: fomo-appear 850ms ease-out both;
+}
+
+.post-header .post-title-main {
+  color: #080808;
+  font-family: "Great Vibes", "Snell Roundhand", "Edwardian Script ITC", cursive;
+  font-size: clamp(5.2rem, 9.5vw, 7rem);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 0.88;
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+  text-shadow: none;
+  transform: none;
+}
+
+.post-header .post-title-expansion {
+  white-space: nowrap;
+  color: #252525;
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.post-header .post-subtitle {
+  max-width: 38rem;
+  margin: 1.45rem auto 1.5rem;
+  color: var(--global-text-color-light);
+  font-family: "MaruBuri", Georgia, serif;
+  font-size: clamp(0.9rem, 1.7vw, 1.02rem);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  line-height: 1.5;
+}
+
+#markdown-content {
+  line-height: 1.8;
+}
+
+#markdown-content p {
+  margin: 1.1em 0;
+}
+
+@keyframes fomo-appear {
+  0% {
+    opacity: 0;
+    filter: blur(7px);
+    transform: scale(1.025);
+  }
+  52% {
+    opacity: 0.78;
+    filter: blur(0.4px);
+    transform: translateX(-1px) scale(1);
+  }
+  56% {
+    opacity: 0.42;
+    transform: translateX(1px) scale(1);
+  }
+  63%,
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .post-header .post-title--expanded {
+    animation: none;
+    filter: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .post-header {
+    padding-top: 2.4rem;
+  }
+
+  .post-header .post-title-main {
+    font-size: clamp(4.6rem, 23vw, 5.9rem);
+  }
+
+  .post-header .post-title-expansion {
+    white-space: normal;
+    font-size: clamp(0.76rem, 3.8vw, 0.92rem);
+    letter-spacing: 0.1em;
+  }
+}
+
+  </style>
+
+
+<div class="post">
+  <header class="post-header">
+    
+      <h1 class="post-title post-title--expanded">
+        <span class="post-title-main">Phd FOMO</span>
+        <span class="post-title-expansion">(Fear of Missing Out)</span>
+      </h1>
+    
+    
+      <p class="post-subtitle">Surviving the LLM Era as a PhD Student</p>
+    
+    <p class="post-meta">
+      Created on October 17, 2026
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <i class="fa-solid fa-calendar fa-sm"></i> 2026
+      
+      
+          ·  
+        
+          
+            <i class="fa-solid fa-hashtag fa-sm"></i> blog_kr,
+          
+          
+             
+          
+        
+          
+            <i class="fa-solid fa-hashtag fa-sm"></i> thoughts
+          
+          
+        
+      
+
+      
+          ·  
+        
+          
+            <i class="fa-solid fa-tag fa-sm"></i> blog_kr
+          
+          
+        
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p><a href="https://pulsekim.github.io/blog_en/2026/FOMO">English Version</a></p>
+
+<p>지난 NeurIPS에는 3만 편이 넘는 논문이, 내년도 ICLR에는 4만 3천 편이 넘는 논문이 제출되었다. 이렇게 논문이 쏟아지는 가운데 arXiv는 한 달에 두 편이라는 투고 제한을 걸었다. RSS는 LLM 사용 확대와 투고 급증에 대비해, 2027년부터 연구의 가설과 방법을 먼저 심사하고 리뷰어의 피드백을 반영해 논문을 완성하는 2단계 <a href="https://roboticsconference.org/information/cfp/" rel="external nofollow noopener" target="_blank">심사 제도</a>를 도입하기까지 했다.</p>
+
+<p>그리고 나는 1년에 논문을 한 편 쓸까 말까 한다.</p>
+
+<h2 id="phd-fomo">Phd FOMO</h2>
+<p>몇 달 전이었던가, 매일 아침 일어나서 공포에 사로잡히던 때가 있었다. 혹시 자는 사이에 누군가 내가 하고 있는 연구를 발표하지는 않았을까. 비슷한 제목의 논문을 발견하면 일단 심장이 내려앉았다. 그런 날들이 반복되면서 스트레스가 쌓였고, 살면서 처음으로 멜라토닌에 의지해 잠을 청하기도 했다. 내 연구가 가치 없다고 생각해서 생기는 불안은 아니었다. 오히려 가치 있다고 믿기 때문에 무서웠다. 이 문제가 중요하고, 이 접근이 의미 있다고 생각하는데, 누군가 먼저 깃발을 꽂으면 어떻게 될까. 내가 몇 달 동안 고민하고 실험한 것이 이미 누군가가 해버린, 새로울 것 없는 연구가 될까 두려웠다. 그리고 나도 이 연구판에서 크게 뒤처지는 게 아닐까 두려웠다. 연구에서 내가 느끼는 FOMO는 대충 그런 것이었다.</p>
+
+<h2 id="back-then">Back Then</h2>
+<p>2019년 대학원 생활을 시작하면서 연구 분야로 Graphics를 고른 이유 중 하나는 ML이나 CV에 비해 덜 급하게 연구할 수 있을 것 같아서였다. 연구의 사이클이 조금 더 길고, 내가 무엇을 하고 있는지 돌아보면서 쫓기지 않고 일할 수 있지 않을까 싶었다. 적어도 당시의 나는 그렇게 느꼈다.</p>
+
+<p>실제로 한동안은 그랬다. 2022년 RSS에 제출한 논문은 2020년 초쯤 함께 연구를 시작해서 2022년 1월에 제출하기까지 거의 2년이 걸렸다. 그럼에도 마음은 여유로웠다. 누구도 이런 짓을 하고 있을 것 같지 않았다.</p>
+
+<p>2024년 SIGGRAPH Asia 논문도 비슷했다. 연구 자체는 2023년 겨울에 이미 끝나 있었지만, 회사 내부의 이런저런 사정으로 이후 5개월 동안 글 작업을 하다가 5월에 논문을 제출했다. 그래도 큰 부담은 없었다. 제스처 연구를 하는 사람이 많지 않았고, 한 1년쯤 천천히 글을 써도 아주 비슷한 연구가 먼저 나올 것 같지는 않았다.</p>
+
+<p>물론 모든 연구가 그렇듯, 연구에서 오는 스트레스는 있었다. 다만 어떻게 하면 이 문제를 풀 수 있을지가 고민이었지, 누군가 먼저 풀고 있을까 봐 걱정하지는 않았다.</p>
+
+<h2 id="fomo-in-the-physical-ai-era">FOMO in the Physical AI ERA</h2>
+<p>2025년부터 Physical AI가 전 세계적인 화두가 되면서 분위기가 달라졌다. 그전까지 내 분야가 메인 포커스에서 살짝 비껴나 있었다면, 이제는 모두가 달려드는 분야가 되었다. 한편에서는 LLM이 분기마다 놀라운 결과를 내놓고, 이에 따라 논문 제출 수도 폭발적으로 늘고 있다”</p>
+
+<p>새 논문을 따라가는 것만으로도 시간이 부족한데, 내 연구도 해야 한다. 2025년 다시 박사과정으로 돌아와 보니, 이제 내 분야도 경쟁이 꽤 치열해져 있었다. 그리고 한 번도 해본 적 없는 깃발 꽂기 경쟁에 나도 참여하게 되었다. 조금 쉬었다 가면 한참 뒤처질 것 같았다. 그렇게 내 FOMO가 시작되었다.</p>
+
+<p>그래도 어쩌겠는가. 내가 두렵다고 해서 세상이 멈춰주는 것은 아니었다. 오히려 변화는 점점 더 빨라지고 있었다. 결국 나도 어떻게든 FOMO를 다루면서 연구를 계속하고 있다. 어쩌면 지금도 마음 한구석에는 FOMO가 있지만 어찌저찌 잘 억누르고 있는 것일지도 모르겠다. 그래도 지금은 공포에 떨기만 하지는 않는다는 게 중요한 것 같다.</p>
+
+<p>오늘은 그 과정에서 도움이 되었던 개인적인 경험을 공유하려고 한다. FOMO를 극복했다고 하기는 어렵지만, 적어도 조금은 억누를 수 있었던 방법들이다. 나는 크게 두 가지 측면에서 이 문제를 바라봤다. 연구 내적으로 FOMO를 다루는 법과 연구 외적으로 공포와 스트레스를 관리하는 법.</p>
+
+<h2 id="연구-내적--유연한-남탓">연구 내적 : 유연한 남탓</h2>
+<p>게임을 좋아하는 한국인이라면 이 밈에 익숙할 것이다. ‘유연한 남탓’. 연구에서도 이 사고방식은 FOMO를 다루는 데 많은 도움이 되었다.</p>
+
+<h4 id="academia-is-unfair">Academia Is Unfair</h4>
+<p>첫째로, Academia가 불공평하다는 사실을 받아들이는 것이다. 어렸을 때는 사회가 무척 불공평하다고 느꼈고, Academia야말로 이상적이고 순수하고 아름다운 세상일 줄 알았다. 하지만 이곳도 불공평하다는 걸 인정해야 FOMO를 느끼는 상황에서도 버틸 수 있다.</p>
+
+<p>이 말은 조금 조심스럽다. 불공평한 상황을 당연하게 받아들이자는 것은 아니다. 다만 거기서 생기는 차이까지 전부 내 능력과 성실함의 문제로 받아들이면 버티기가 어렵다. 간혹 AI로 대강 실험하고 딸깍해서 쓴 것처럼 보이는 논문이 좋은 학회에 붙는데, 내가 1년간 피땀 흘려 쓴 논문은 떨어지는 일도 있다. 물론 남의 논문에 얼마나 많은 노력이 들어갔는지 내가 다 알 수는 없다. 그래도 그런 결과를 마주하면 억울한 마음이 드는 것은 어쩔 수 없다. 그때마다 내가 부족해서 그렇다고 스스로를 갉아먹으면 FOMO는 더 심해진다. 때로는 원래 불공평한 세상에서 이번에는 운이 좋지 않았다고 생각할 수 있어야 다음을 위한 동력이 생긴다.</p>
+
+<p>물론 이 말을 잘못 받아들이면 누구와도 소통하지 않고 자기 생각만 고집하는 사람이 될 수 있으니 주의해야 한다. 내가 말하고자 하는 것은 의미 있는 일에 내가 할 수 있는 최선을 다하되, 결과에는 조금 초연해질 필요가 있다는 것이다. 나에게는 이 분야가 원래 불공평하고, 좋은 과정이 늘 좋은 결과를 보장하지는 않는다는 점을 기억하는 것이 도움이 되었다.</p>
+
+<h4 id="when-in-doubt-trust-your-supervisor">When in Doubt, Trust Your Supervisor</h4>
+<p>지도교수를 믿는 것도 도움이 된다. 지도교수가 유능하다고 믿고 따르자. 연구가 잘 안되면 속으로는 그의 탓을 하는 것을 추천한다.</p>
+
+<p>비슷한 논문 하나가 나오면 나는 당장 큰일이 난 것 같지만, 교수님은 다르게 볼 수도 있다. 이 방향으로 계속 가도 되는지, 어디를 바꿔야 하는지, 정말 걱정할 만한 상황인지 판단하는 데 도움을 주실 수 있다. 대다수의 지도교수는 우리보다 연구 경험이 훨씬 많다. 그 경험과 판단을 믿는 편이 혼자 모든 것을 판단하고 책임지려는 것보다 낫다. 그리고 그것도 지도교수의 역할이라고 생각한다. (글을 쓰다 보니 내 지도교수님들께 꽤 죄송해진다. 늘 감사해야겠다.)</p>
+
+<p>그런데 이 글을 읽는 당신이 교수라면 아쉽게도 내가 해줄 수 있는 말이 없다. 아직 나는 대학원생이라 교수의 고충을 안다고 말할 수는 없다. 세상의 모든 교수님께 감사를 보낼 따름이다.</p>
+
+<h4 id="no-two-studies-are-exactly-alike">No Two Studies Are Exactly Alike</h4>
+<p>완벽히 같은 연구는 없다는 것도 자주 떠올리려고 한다. 비슷한 문제를 풀어도 가정이 다르고, 방법이 다르고, 적용한 범위도 다르다. 이런 작은 차이에서 예상하지 못한 발견을 할 수도 있고, 그것이 하나의 contribution으로 이어질 수도 있다. 비슷한 논문이 나왔다고 내 연구가 곧바로 의미 없어지는 것은 아니다.</p>
+
+<p>물론 실제로 기여가 겹칠 수 있고, 그러면 방향을 수정해야 할 수도 있다. 그래도 그 판단은 논문을 제대로 읽고 나서 할 일이다. 제목만 보고 내 연구가 의미 없어졌다고 생각할 필요는 없다. 얼마나 겹치는지, 내가 더 해볼 수 있는 것은 무엇인지부터 확인해야 한다.</p>
+
+<h2 id="연구-외적-환기가-필요하다">연구 외적: 환기가 필요하다.</h2>
+<p>밴쿠버는 날씨가 좋다. 정정한다. 적어도 비가 오지 않으면 정말 좋다. 그런 날 밖에 나가서 조금 걷다 보면, 논문 걱정도 좀 덜하게 된다. 책상 앞에서는 계속 같은 생각만 하다가도 밖에 나가면 좀 괜찮아질 때가 있다. 어디에 살든 연구 말고 다른 데 눈을 돌릴 만한 것이 하나쯤은 있을 것이다. 나에게는 밖에 나가서 바람을 쐬고 하늘을 보는 것이 큰 도움이 되었다.</p>
+
+<h4 id="enjoy-your-leisure-time">Enjoy Your Leisure Time</h4>
+<p>취미는 머리를 식히는 데 도움이 된다. 뒤처진다는 공포가 심할 때는 이런 활동도 사치라고 느껴져 더 일에 집착하게 되겠지만, 잠깐 다른 데 신경을 쓰는 것도 필요하다. 책을 읽어도 좋다. 운동을 해도 좋다. 게임도 좋다. <a href="https://store.steampowered.com/app/1049590/Eternal_Return/" rel="external nofollow noopener" target="_blank">이터널 리턴</a>, 지금 바로 다운로드하세요.</p>
+
+<p>농담 같지만 연구 외에 집중할 수 있는 일이 있다는 건 꽤 중요하다. 쉬는 시간에도 논문을 보고, LinkedIn에서 다른 사람의 성과를 확인하면 쉬어도 별로 쉰 것 같지 않다. 여담이지만, 나에게 LinkedIn은 정말 PhD FOMO를 양산하는 미디어 같다. FOMO가 심할 때는 의도적으로 LinkedIn에 접속하지 않는 것도 방법이다. 잠깐이라도 다른 데 집중하고 돌아오면 좀 낫다.</p>
+
+<h4 id="friends-and-family">Friends and Family</h4>
+<p>개인적으로 가장 큰 힘이 되는 것은 가족과 친구다. 내 논문이 어느 학회에 붙는지, 내 방법이 얼마나 새로운지와 상관없이 나를 대해주는 사람들이 있다는 것. 연구가 잘 안 풀려도 같이 밥 먹고 별것 아닌 이야기를 하다 보면 기분이 좀 나아진다. 가족과 친구들과 보내는 시간이 치유가 될 때도 있다.</p>
+
+<h4 id="alternatives">Alternatives</h4>
+<p>당장 의지할 사람이 없다면 애니메이션 캐릭터에라도 감정이입을 해보는 건 어떨까. 나는 팔을 물어뜯기고도 전진하는 엘빈 스미스 단장을 종종 생각한다. 상황은 불합리하고, 노력한다고 좋은 결과가 보장되는 것도 아니다. 그래도 그 안에서 뭔가 발버둥이라도 쳐보는 것이다. 좀 뜬금없지만 나는 이런 게 도움이 된다.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+
+
+<figure>
+  <picture>
+    <!-- Auto scaling with imagemagick -->
+    <!--
+      See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
+      https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
+    -->
+    
+    <img src="/assets/img/erwin.jpeg" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    스스메!
+</div>
+
+<h2 id="결론">결론</h2>
+<p>이렇게 적었다고 내가 FOMO를 극복한 것은 아니다. 내일 아침 비슷한 논문을 보면 또 심장이 내려앉을지도 모른다. 그래도 그때마다 지금까지 한 일이 전부 의미 없었다고 생각하지는 않으려고 한다.</p>
+
+<p>Academia는 불합리하다. 그리고 우리는 그 안에서 무엇인가를 해보겠다고 스스로 들어왔다. 들어올 때 이 정도일 줄 알았느냐고 하면 할 말은 없지만, 어쨌든 지금은 여기 있다.</p>
+
+<p>공포가 몰려오는 것은 어쩔 수 없다. 그래도 중심을 잡으면서 내가 하려던 연구를 계속해보려고 한다. 아직 풀리지 않은 문제가 있고, 내가 확인하고 싶은 것도 남아 있으니까.</p>
+
+<p>장인어른께서 우리 부부에게 주신 글귀가 있다.</p>
+
+<p>“우보천리.”</p>
+
+<p>소의 걸음으로도 천 리를 간다는 뜻이다. 오늘도 나는 말처럼 달리지는 못하더라도, 소의 걸음으로 한 걸음을 걸으려고 한다.</p>
+
+<h4 id="reference">Reference</h4>
+<ul>
+  <li>RSS: https://roboticsconference.org/</li>
+  <li>Eternal Retrun : https://store.steampowered.com/app/1049590/Eternal_Return/</li>
+  <li>Attack on Titan: https://blog.naver.com/cowhdals1111/222857609362</li>
+</ul>
+
+    </div>
+  </article>
+
+  
+
+  
+
+  
+    
+      
+
+
+
+    
+  
+
+  
+  
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->
+    
+
+
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      
+  © Copyright 2026
+  Sun Woo
+  
+  Kim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
+
+  
+  
+
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+
+  <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/masonry.js?v=a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script>
+
+
+
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script>
+<script defer src="/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script>
+<script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script>
+
+<!-- Badges -->
+
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+
+
+  <!-- MathJax -->
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script>
+  
+    <script src="/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script>
+    <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+  <!-- Scrolling Progress Bar -->
+  <script defer src="/assets/js/progress-bar.js?v=2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script>
+
+
+
+
+
+
+
+  <!-- Back to Top -->
+  <script src="/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script>
+  <script>
     addBackToTop();
-  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?v=a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?v=6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?v=6f508d74becd347268a7f822bca7309d"></script> </body> </html>
+  </script>
+
+
+
+  <!-- Search -->
+  <script type="module" src="/assets/js/search/ninja-keys.min.js?v=a3446f084dcaecc5f75aa1757d087dcf"></script>
+  <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys>
+  <script src="/assets/js/search-setup.js?v=6c304f7b1992d4b60f7a07956e52f04a"></script>
+  <script src="/assets/js/search-data.js"></script>
+  <script src="/assets/js/shortcut-key.js?v=6f508d74becd347268a7f822bca7309d"></script>
+
+
+
+
+  </body>
+</html>
