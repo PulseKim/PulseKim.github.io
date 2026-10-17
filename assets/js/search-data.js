@@ -135,6 +135,11 @@ ninja.data = [{
           description: "Gesture and Animation",
           section: "Posts_en",handler: () => {
               window.location.href = "/blog_en/2026/BodyGesture/";
+            },},{id: "posts_en-phd-fomo",
+          title: 'Phd FOMO',
+          description: "Surviving the LLM Era as a PhD Student",
+          section: "Posts_en",handler: () => {
+              window.location.href = "/blog_en/2026/FOMO/";
             },},{id: "posts_kr-trivia-human-motion-control-of-quadrupedal-robots-using-deep-reinforcement-learning",
           title: 'Trivia: Human Motion Control of Quadrupedal Robots Using Deep Reinforcement Learning',
           description: "논문에는 없는 여담들",
@@ -160,6 +165,11 @@ ninja.data = [{
           description: "회사에서 논문을 쓴다는 것",
           section: "Posts_kr",handler: () => {
               window.location.href = "/blog_kr/2026/BodyGesture/";
+            },},{id: "posts_kr-phd-fomo",
+          title: 'Phd FOMO',
+          description: "Surviving the LLM Era as a PhD Student",
+          section: "Posts_kr",handler: () => {
+              window.location.href = "/blog_kr/2026/FOMO/";
             },},{
         id: 'social-email',
         title: 'email',
