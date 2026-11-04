@@ -22,8 +22,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I’m Sun Woo Kim, a PhD student in Computer Science at Simon Fraser University under the supervision of Professor [Xue Bin (Jason) Peng](https://xbpeng.github.io/). 
+Hi there! I’m Sun Woo Kim, a PhD student in Computing Science at Simon Fraser University under the supervision of Professor [Xue Bin (Jason) Peng](https://xbpeng.github.io/). 
 
-Before joining SFU, I fulfilled my military service as a Technical Research Personnel at the Graphics AI Lab at NCSOFT(later spun-offed to NC AI). I received my M.Sc. in computer science from Seoul National University advised by Professor [Jehee Lee](https://mrl.snu.ac.kr/~jehee/). I was fortunate to collaborate closely with [Sehoon Ha](https://faculty.cc.gatech.edu/~sha9/) during that time. I earned my B.S. degree in creative IT Engineering from POSTECH. 
+Before joining SFU, I was a graphics researcher at the Graphics AI Lab at NCSOFT(later spun-offed to NC AI). I received my M.Sc. in computer science from Seoul National University advised by Professor [Jehee Lee](https://mrl.snu.ac.kr/~jehee/). I was fortunate to collaborate closely with [Sehoon Ha](https://faculty.cc.gatech.edu/~sha9/) during that time. I earned my B.S. degree in creative IT Engineering from POSTECH. 
 
-My research lies at the intersection of robotics and computer animation.
+I’m excited about all things motion. Whether kinematic, physics-based or even gesture, and whether it’s for human characters, humanoid robots, or even dogs and robot dogs!
+
+I am open to internship opportunities for summer 2027. Please feel free to reach out if you have a relevant opportunity!
