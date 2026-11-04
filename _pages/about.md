@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Pronounced like “Sun” (as in the sky) and “Woo” (rhymes with “too”).
 profile:

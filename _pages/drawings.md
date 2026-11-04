@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /drawings/
-title: drawings
+title: Drawings
 nav: true
 nav_order: 5
 page_title: My drawings

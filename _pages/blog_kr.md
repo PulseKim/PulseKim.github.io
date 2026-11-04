@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog_kr/
-title: blog_kr
+title: Blog (KR)
 nav: true
 nav_order: 4
 page_title: 김선우 블로그
