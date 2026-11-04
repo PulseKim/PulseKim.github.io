@@ -4,41 +4,41 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
   },{id: "nav-publications",
-          title: "publications",
+          title: "Publications",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
         },{id: "nav-cv",
-          title: "cv",
+          title: "CV",
           description: "My academic journey",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
           },
         },{id: "nav-blog-en",
-          title: "blog_en",
+          title: "Blog (EN)",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog_en/index.html";
           },
         },{id: "nav-blog-kr",
-          title: "blog_kr",
+          title: "Blog (KR)",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog_kr/index.html";
           },
         },{id: "nav-drawings",
-          title: "drawings",
+          title: "Drawings",
           description: "",
           section: "Navigation",
           handler: () => {
